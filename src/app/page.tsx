@@ -25,8 +25,8 @@ export default function HomePage() {
           <div className="hero-copy">
             <SectionHeading
               eyebrow="Operational AI Advisory"
-              title={"Operational clarity.\nMeasured results."}
-              description="Quanta advises infrastructure, field service, and industrial leaders on AI systems that reduce backlog, strengthen decision-making, and move into production with discipline."
+              title={"AI for critical workflows.\nBuilt for measurable outcomes."}
+              description="If your teams are carrying too much manual work, inconsistent decisions, or reporting delays, Quanta helps you identify the right AI opportunities, design the operating model, and move into production with confidence."
               level="h1"
             />
 
@@ -40,9 +40,9 @@ export default function HomePage() {
             </div>
 
             <ul className="hero-proof-list">
-              <li>Prioritized workflow strategy tied to measurable KPIs</li>
-              <li>Automation and copilots designed around clear review paths</li>
-              <li>Rollout plans built for real operating constraints</li>
+              <li>Prioritize the workflows where delay, rework, and manual review cost you most</li>
+              <li>Deploy automation and copilots with clear controls, review paths, and accountability</li>
+              <li>Give leadership a practical plan backed by measurable business impact</li>
             </ul>
           </div>
 
@@ -60,8 +60,8 @@ export default function HomePage() {
               <div className="hero-sculpture-copy">
                 <span className="eyebrow">Delivery Focus</span>
                 <p>
-                  Strategy, workflow design, and implementation planning aligned
-                  within a single operating model.
+                  From strategy through deployment, every engagement is built
+                  around the workflows your teams rely on every day.
                 </p>
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function HomePage() {
 
         <div className="container trust-band">
           <span className="trust-kicker">
-            Built for complex operating environments
+            Relevant across complex operating environments
           </span>
           <div className="trust-strip">
             {clientStrip.map((item) => (
@@ -95,8 +95,8 @@ export default function HomePage() {
           <div>
             <SectionHeading
               eyebrow="What We Do"
-              title={"End-to-end\noperational AI advisory."}
-              description="From strategy through workflow design and rollout, Quanta helps organizations convert AI interest into measurable operating performance."
+              title={"Advisory that turns AI interest\ninto operating performance."}
+              description="You do not need a broad AI program to start seeing results. You need the right workflow, the right controls, and a rollout plan your teams will actually use."
             />
             <Link href="/services" className="text-link">
               View all services
@@ -127,8 +127,8 @@ export default function HomePage() {
           <div className="results-heading-row">
             <SectionHeading
               eyebrow="Selected Outcomes"
-              title={"Measured outcomes.\nOperational rigor."}
-              description="Quanta’s strongest results come from tightly scoped systems built around real queues, documents, approvals, and exception paths."
+              title={"Results leaders can defend.\nSystems teams can use."}
+              description="The strongest outcomes come from focused systems aligned to real workflows, clear ownership, and business goals that can be measured."
             />
             <Link href="/case-studies" className="button button-secondary">
               View All Case Studies
@@ -162,7 +162,7 @@ export default function HomePage() {
           <CtaBanner
             eyebrow="Next Step"
             title="Ready to define the workflow that matters most?"
-            description="Quanta can help identify the highest-leverage operating signal, establish the right review model, and define a rollout path leadership can support with confidence."
+            description="Quanta can help you identify the highest-value opportunity, define the right review model, and build a rollout plan leadership can support with confidence."
             primary={{ href: "/contact", label: "Book a Consultation" }}
             secondary={{ href: "/services", label: "Review Services" }}
           />

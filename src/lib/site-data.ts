@@ -70,22 +70,22 @@ export const heroStats: Stat[] = [
   {
     value: "91%",
     label: "priority workflow signal captured",
-    support: "We map the operators, documents, systems, and exceptions that shape real decisions.",
+    support: "We map the operators, documents, systems, and exceptions that shape the decisions your teams make every day.",
   },
   {
     value: "34%",
     label: "average cycle-time improvement",
-    support: "Most gains come from removing small operational bottlenecks that compound into speed and margin.",
+    support: "The strongest gains often come from removing small operational bottlenecks that compound into speed and margin.",
   },
   {
     value: "8.5 wks",
     label: "median pilot launch window",
-    support: "Quanta scopes for deployment rather than demonstration, so teams reach production faster.",
+    support: "Quanta scopes for deployment rather than demonstration, so your teams can reach production faster.",
   },
   {
     value: "+28%",
     label: "reporting visibility lift",
-    support: "Executives get decision-ready metrics without the usual spreadsheet lag.",
+    support: "Leadership gets decision-ready visibility without the usual spreadsheet lag.",
   },
 ];
 
@@ -116,11 +116,11 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "Operational AI Strategy",
     summary:
-      "Translate executive AI priorities into a ranked portfolio of workflows, decisions, and systems worth addressing first.",
+      "Clarify where AI can create the most value across your workflows, systems, and teams.",
     bullets: [
-      "Signal mapping across field, finance, service, and reporting teams",
-      "Use-case prioritization by speed-to-value and operational risk",
-      "Pilot roadmap with staffing, governance, and integration implications",
+      "Assess operational bottlenecks, decision points, and handoffs",
+      "Rank use cases by business value, risk, and feasibility",
+      "Define a roadmap leadership can approve and teams can execute",
     ],
     icon: "signal",
     ctaLabel: "Define the right first moves",
@@ -128,9 +128,9 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "Workflow Automation",
     summary:
-      "Automate high-friction processes such as intake, routing, classification, approvals, and exception handling.",
+      "Reduce manual routing, classification, approvals, and exception handling in the processes creating the most drag.",
     bullets: [
-      "Document and inbox processing with human review paths",
+      "Document and inbox processing with clear human review paths",
       "Cross-system orchestration for ERP, CRM, and operations data",
       "Escalation logic that keeps supervisors in control",
     ],
@@ -140,11 +140,11 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "AI Copilots",
     summary:
-      "Deploy role-specific copilots for dispatch, shared services, account teams, and operating leaders who need faster answers.",
+      "Give teams faster access to answers, context, and recommended next steps without weakening control.",
     bullets: [
       "Grounded search over SOPs, notes, forms, and historical cases",
       "Decision support with recommended next steps and rationale",
-      "Adoption design that fits operator workflows instead of replacing them",
+      "Adoption design that fits existing workflows instead of replacing them",
     ],
     icon: "copilot",
     ctaLabel: "Give teams better decisions",
@@ -152,11 +152,11 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "Data Foundations",
     summary:
-      "Prepare fragmented operational data for trustworthy AI systems without forcing a full re-platforming effort.",
+      "Prepare the data, documents, and operational context AI systems need to perform reliably.",
     bullets: [
       "Data readiness audits for unstructured and semi-structured inputs",
       "Lightweight pipelines for retrieval, monitoring, and reporting",
-      "Measurement models tied to cycle time, throughput, and margin",
+      "Measurement models tied directly to cycle time, throughput, and margin",
     ],
     icon: "database",
     ctaLabel: "Make the data usable",
@@ -164,7 +164,7 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "Governance & Rollout",
     summary:
-      "Establish guardrails, review flows, and adoption plans that make AI systems credible in production.",
+      "Put the right controls, review paths, and adoption plan around every deployment.",
     bullets: [
       "Human-in-the-loop controls for sensitive decisions and exceptions",
       "Quality monitoring, fallback paths, and escalation thresholds",
@@ -176,7 +176,7 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "Performance Analytics",
     summary:
-      "Show where the system is helping, where it is drifting, and which workflows warrant expansion next.",
+      "Measure what is improving, where intervention is needed, and when expansion makes sense.",
     bullets: [
       "Outcome dashboards for speed, workload, quality, and savings",
       "Continuous tuning based on real production feedback",
@@ -189,24 +189,24 @@ export const serviceCards: ServiceCard[] = [
 
 export const processSteps: ProcessStep[] = [
   {
-    title: "Discover the operating signal",
+    title: "Identify where value is being lost",
     summary:
-      "We interview frontline and back-office teams, inspect the systems they rely on, and trace where latency, rework, or manual effort accumulates.",
+      "We work with frontline and back-office teams to see where latency, rework, or manual effort is accumulating across the workflow.",
   },
   {
-    title: "Design the workflow around decisions",
+    title: "Design around the work and the control points",
     summary:
-      "We define where AI should classify, summarize, recommend, or draft, and where a human should review, approve, or intervene.",
+      "We define where AI should classify, summarize, recommend, or draft, and where people should review, approve, or intervene.",
   },
   {
     title: "Deploy in the real environment",
     summary:
-      "Pilots launch inside the tools teams already use, with measurable success criteria, exception paths, and operating visibility from day one.",
+      "Pilots launch inside the tools your teams already use, with measurable success criteria, exception paths, and operating visibility from day one.",
   },
   {
-    title: "Optimize what compounds",
+    title: "Improve from production feedback",
     summary:
-      "Once a workflow is stable, we tune prompts, retrieval, logic, and reporting to grow throughput and trust over time.",
+      "Once a workflow is stable, we tune prompts, retrieval, logic, and reporting so throughput and trust continue to improve over time.",
   },
 ];
 
@@ -240,14 +240,14 @@ export const industryLanes = [
 export const caseStudies: CaseStudy[] = [
   {
     slug: "dispatch-command-center",
-    title: "Dispatch Command Center AI",
+    title: "Dispatch Decision Support",
     industry: "Utility field services",
     challenge:
       "Schedulers were juggling work orders, crew notes, outage updates, and customer emails across multiple systems before they could assign work.",
     solution:
       "Quanta built an AI-assisted dispatch workspace that classified urgency, summarized job context, recommended next actions, and routed exceptions into a supervisor queue.",
     summary:
-      "Morning triage compressed from a two-hour scramble into a guided review flow that surfaced the right jobs, the right notes, and the right escalation logic in one place.",
+      "Morning triage shifted from a two-hour scramble into a guided review flow that surfaced the right jobs, the right notes, and the right escalation logic in one place.",
     timeline: "6 weeks to pilot, 12 weeks to regional rollout",
     featuredImage: "/images/case-studies/port-operations.png",
     metrics: [
@@ -270,14 +270,14 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "invoice-intake",
-    title: "Invoice Intake and Exception Handling",
+    title: "Invoice Intake and Exceptions",
     industry: "Industrial distribution",
     challenge:
       "AP analysts were manually classifying invoices, matching supporting documents, and chasing exceptions across email chains and shared drives.",
     solution:
       "Quanta implemented a document pipeline that extracted fields, matched supporting records, flagged risk conditions, and staged exceptions for quick human review.",
     summary:
-      "The team moved from inbox triage to exception-based review, which made the finance queue smaller, cleaner, and much faster to close.",
+      "The team moved from inbox triage to exception-based review, which made the finance queue smaller, cleaner, and significantly faster to close.",
     timeline: "4 weeks to pilot, 9 weeks to expanded rollout",
     metrics: [
       {
@@ -381,19 +381,19 @@ export const teamMembers: TeamMember[] = [
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Quanta did not hand us a strategy deck and disappear. They built the workflow with our dispatch leads, measured it weekly, and proved value fast.",
+      "Quanta did not leave us with a strategy deck. They worked with our dispatch leads, measured the workflow weekly, and demonstrated value quickly.",
     author: "Jordan Ellis",
     role: "COO, regional service network",
   },
   {
     quote:
-      "Their team understood the difference between a flashy pilot and a finance process we could actually rely on at close. That discipline mattered.",
+      "Their team understood the difference between a pilot that looks good and a finance process we could rely on during close. That discipline mattered.",
     author: "Naomi Reyes",
     role: "VP Shared Services, industrial distributor",
   },
   {
     quote:
-      "The AI assistant worked because it respected the operator. Every answer was grounded, reviewable, and tied back to how our teams really work.",
+      "The assistant succeeded because it respected the operator. Every answer was grounded, reviewable, and connected to how our teams actually work.",
     author: "Devin Hart",
     role: "SVP Operations, infrastructure contractor",
   },
@@ -409,7 +409,7 @@ export const valuePoints = [
   {
     title: "Metrics before hype",
     summary:
-      "Every engagement starts with cycle time, throughput, accuracy, margin visibility, or workload reduction goals that operators can verify.",
+      "Every engagement starts with cycle time, throughput, accuracy, margin visibility, or workload reduction goals your teams can verify.",
     icon: "chart" as const,
   },
   {

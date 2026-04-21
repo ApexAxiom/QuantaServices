@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     template: "%s | Quanta Services",
   },
   description:
-    "Operational AI advisory for infrastructure, field service, logistics, and shared-services teams that need measurable workflow improvement.",
+    "Operational AI advisory for infrastructure, field service, logistics, and shared-services teams seeking measurable workflow improvement.",
   keywords: [
     "operational AI advisory",
     "AI consulting",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Quanta Services | Operational AI Advisory",
     description:
-      "Operational AI for complex organizations that need cleaner workflows, faster decisions, and measurable business results.",
+      "Operational AI advisory for organizations that need cleaner workflows, faster decisions, and measurable business results.",
     images: [
       {
         url: "/images/visuals/gold-wave-hero.png",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Quanta Services | Operational AI Advisory",
     description:
-      "Operational AI for complex teams that need faster decisions and measurable business results.",
+      "Operational AI advisory for complex teams that need faster decisions and measurable business results.",
     images: ["/images/visuals/gold-wave-hero.png"],
   },
 };

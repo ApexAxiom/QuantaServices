@@ -8,7 +8,7 @@ import { faqItems } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Quanta Services to discuss workflow automation, operational AI, and advisory engagements for complex operating teams.",
+    "Contact Quanta Services to discuss workflow bottlenecks, automation opportunities, and operational AI priorities.",
 };
 
 export default function ContactPage() {
@@ -16,8 +16,8 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Bring the workflow. Quanta will help define the right AI move."
-        description="Use the form below to describe the operating bottleneck, backlog, reporting friction, or AI opportunity you want to assess. A formal business case is not required."
+        title="Tell us where the work is slowing down."
+        description="Share the process, backlog, reporting issue, or decision bottleneck you want to improve. We will help you determine whether AI is the right lever and what a practical first step could look like."
         pills={[
           "Response within one business day",
           "Private inquiry routing",
@@ -43,7 +43,7 @@ export default function ContactPage() {
           <div className="contact-panel">
             <h2>Start the conversation</h2>
             <p className="form-copy">
-              Tell Quanta where the process slows down, where manual review is
+              Tell us where work is getting stuck, where manual review is
               consuming time, or where reporting still depends on spreadsheets
               and status meetings.
             </p>
@@ -64,8 +64,8 @@ export default function ContactPage() {
               </li>
               <li>
                 <strong>Built for workflow clarity</strong>
-                A short brief is enough. Quanta can help shape the business case
-                after the first conversation.
+                A short brief is enough. Quanta can help shape the scope and
+                business case after the first conversation.
               </li>
             </ul>
           </aside>
@@ -76,7 +76,7 @@ export default function ContactPage() {
         <div className="container">
           <SectionHeading
             eyebrow="FAQ"
-            title="Questions teams usually ask before reaching out."
+            title="Questions leadership teams usually ask before reaching out."
             description="If you already know the workflow you want to improve, the fastest next step is to send a brief and let Quanta shape the initial scope."
           />
 

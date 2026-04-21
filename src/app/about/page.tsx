@@ -9,7 +9,7 @@ import { teamMembers, testimonials, valuePoints } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Quanta Services, an operational AI advisory firm focused on workflow design, production systems, and measurable rollout.",
+    "Learn how Quanta Services helps operating teams turn AI interest into disciplined execution and measurable workflow improvement.",
 };
 
 export default function AboutPage() {
@@ -17,16 +17,16 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About Quanta"
-        title="Built for teams that need AI programs grounded in operating reality."
-        description="Quanta Services was created to close the gap between AI ambition and operational execution. The firm partners with industrial and service organizations that require measurable workflow improvement, not polished theory."
+        title="Built for companies that need AI programs grounded in operating reality."
+        description="Quanta Services was created for leadership teams that cannot afford vague pilots, stalled implementations, or disconnected strategy. The firm helps clients turn AI interest into systems that improve real work."
         actions={[
-          { href: "/contact", label: "Meet the Team" },
-          { href: "/case-studies", label: "See Results", variant: "secondary" },
+          { href: "/contact", label: "Start a Conversation" },
+          { href: "/case-studies", label: "Review Results", variant: "secondary" },
         ]}
         pills={[
-          "Senior advisory team",
-          "Industrial workflow focus",
-          "Measured rollout design",
+          "Senior-led engagement",
+          "Operational focus",
+          "Measured delivery",
         ]}
         aside={
           <div className="page-hero-card">
@@ -49,12 +49,11 @@ export default function AboutPage() {
             <SectionHeading
               eyebrow="Firm Story"
               title="Strategy is only useful if it survives contact with the workflow."
-              description="Quanta combines operating-model rigor with practical implementation planning so teams can move from concept to live system with fewer false starts."
+              description="Clients come to Quanta when the opportunity is clear but the path to execution is not. The work is designed to close that gap without creating more noise."
             />
             <p className="body-copy">
-              The firm’s point of view is simple: most AI value sits inside the
-              small decisions, repetitive reviews, and document-heavy workflows
-              that slow businesses down every day.
+              Most AI value sits inside the small decisions, repetitive reviews,
+              and document-heavy workflows that slow businesses down every day.
             </p>
             <p className="body-copy">
               That is why Quanta focuses on field operations, shared services,
@@ -70,10 +69,10 @@ export default function AboutPage() {
               description="Quanta supports operators across regional networks, shared-services centers, and leadership teams with a delivery model built for complex organizations."
             />
             <p className="body-copy">
-              The firm is designed for teams that care less about geography and
-              more about whether the work improves throughput, response time,
-              and reporting clarity. Engagements stay close to the workflow and
-              to the leaders accountable for the outcome.
+              Clients typically care less about geography and more about whether
+              the work improves throughput, response time, and reporting
+              clarity. Engagements stay close to the workflow and to the
+              leaders accountable for the outcome.
             </p>
           </div>
         </div>
@@ -84,7 +83,7 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="Operating Principles"
             title="Clear principles that keep delivery credible."
-            description="Quanta’s work is shaped by the same principles whether the engagement is a strategy sprint, workflow automation build, or broader operating roadmap."
+            description="These principles shape every engagement, whether the work is a strategy sprint, a workflow automation build, or a broader operating roadmap."
           />
 
           <div className="values-grid">
@@ -105,7 +104,7 @@ export default function AboutPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Leadership Team"
-            title="The people behind the delivery model."
+            title="The team clients work with directly."
             description="Quanta is intentionally senior, operator-aware, and structured to stay close to the workflow from discovery through rollout."
           />
 
@@ -138,8 +137,8 @@ export default function AboutPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Client Voice"
-            title="What clients say when the workflow starts working."
-            description="The strongest feedback comes from teams that feel the workflow change directly in their day-to-day work."
+            title="What clients value in the work."
+            description="The strongest feedback comes from teams that see the workflow improve directly in day-to-day operations."
           />
 
           <div className="testimonial-grid">
@@ -161,9 +160,9 @@ export default function AboutPage() {
         <div className="container">
           <CtaBanner
             eyebrow="Start With Quanta"
-            title="Need an AI partner that can speak to operators and executives in the same room?"
-            description="Quanta can help frame the roadmap, test the workflow, and define an implementation path that works for both frontline teams and leadership."
-            primary={{ href: "/contact", label: "Contact Quanta" }}
+            title="Need a partner that can work with operators and executives in the same room?"
+            description="Quanta can help frame the roadmap, pressure-test the workflow, and define an implementation path that works for both frontline teams and leadership."
+            primary={{ href: "/contact", label: "Start the Conversation" }}
             secondary={{ href: "/services", label: "Review Services" }}
           />
         </div>

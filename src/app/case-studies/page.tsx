@@ -18,11 +18,11 @@ export default function CaseStudiesPage() {
     <>
       <PageHero
         eyebrow="Case Studies"
-        title="Representative work showing how operational AI performs when it is deployed with discipline."
-        description="Quanta focuses on workflows with visible drag: triage, intake, reporting, knowledge retrieval, and exception-heavy decision chains. These examples illustrate the operating outcomes that follow."
+        title="Representative work showing what focused operational AI can deliver."
+        description="These examples show how disciplined scoping, clear controls, and measured rollout can improve throughput, reduce manual work, and give leadership better visibility."
         actions={[
-          { href: "/contact", label: "Discuss Your Workflow" },
-          { href: "/services", label: "See Service Model", variant: "secondary" },
+          { href: "/contact", label: "Discuss Your Priorities" },
+          { href: "/services", label: "Review Services", variant: "secondary" },
         ]}
         pills={[
           "Dispatch acceleration",
@@ -33,8 +33,8 @@ export default function CaseStudiesPage() {
         aside={
           <div className="page-hero-card">
             <p className="body-copy">
-              Quanta measures success in operator time, decision speed, workload
-              reduction, and visibility for leadership.
+              Quanta measures success in cycle time, workload reduction,
+              decision quality, and visibility for leadership.
             </p>
             <div className="metrics-row" style={{ marginTop: "18px" }}>
               {companyStats.slice(0, 3).map((stat) => (
@@ -97,7 +97,7 @@ export default function CaseStudiesPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Additional Wins"
-            title="Additional examples of immediate operating leverage."
+            title="More examples of measurable improvement."
             description="These programs were built around one contained workflow at a time and then expanded once the business case was proven."
           />
 
@@ -141,7 +141,7 @@ export default function CaseStudiesPage() {
           <CtaBanner
             eyebrow="Apply This"
             title="Apply the same operating discipline to your own workflow."
-            description="If your team has a queue that drags, a reporting cycle that takes too long, or a decision path buried in documents and emails, Quanta can help scope the right AI system around it."
+            description="If your team has a queue that drags, a reporting cycle that takes too long, or a decision path buried in documents and emails, Quanta can help define the right AI system around it."
             primary={{ href: "/contact", label: "Talk Through the Workflow" }}
             secondary={{ href: "/services", label: "See Capabilities" }}
           />

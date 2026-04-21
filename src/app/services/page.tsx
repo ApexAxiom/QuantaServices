@@ -10,7 +10,7 @@ import { industryLanes, processSteps, serviceCards } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore Quanta Services offerings across AI strategy, workflow automation, copilots, data readiness, governance, and performance analytics.",
+    "Explore Quanta Services offerings across AI strategy, workflow automation, copilots, data readiness, governance, and performance measurement.",
 };
 
 export default function ServicesPage() {
@@ -18,11 +18,11 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Services designed for industrial teams that expect AI to work in production."
-        description="Quanta Services combines strategy, workflow design, and execution support so the right work moves first, operators stay involved, and value becomes visible early."
+        title="Services for teams that need AI to improve work, not add complexity."
+        description="Whether you are setting priorities or moving a workflow into production, Quanta helps you make sound decisions, design the right controls, and deliver results your teams can trust."
         actions={[
-          { href: "/contact", label: "Talk to Quanta" },
-          { href: "/case-studies", label: "Review Wins", variant: "secondary" },
+          { href: "/contact", label: "Discuss Your Priorities" },
+          { href: "/case-studies", label: "See Client Results", variant: "secondary" },
         ]}
         pills={[
           "Workflow automation",
@@ -49,8 +49,8 @@ export default function ServicesPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Service Pillars"
-            title="Each engagement is shaped around the workflow, the operator, and the business metric."
-            description="Quanta does not sell generic AI packages. Engagements are scoped around the decisions, documents, exceptions, and systems that determine throughput."
+            title="Each engagement is built around the work your teams do every day."
+            description="Quanta does not sell generic AI packages. Every engagement is scoped around the decisions, documents, exceptions, and systems that affect throughput, quality, and visibility."
           />
 
           <div className="service-grid">
@@ -76,7 +76,7 @@ export default function ServicesPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Industry Fit"
-            title="Designed for teams balancing real-world complexity with high decision volume."
+            title="Best suited to environments where complexity is high and decisions carry real consequences."
             description="Quanta’s delivery model is strongest where workflows span documents, human review, legacy systems, and operating pressure."
           />
 
@@ -99,22 +99,22 @@ export default function ServicesPage() {
           <div className="story-panel">
             <SectionHeading
               eyebrow="Engagement Model"
-              title="Advisory with execution support."
-              description="Quanta helps leadership decide where to move first and then carries the work through pilot delivery, review logic, and operator rollout."
+              title="What working together looks like."
+              description="Quanta helps leadership decide where to move first and then carries the work through pilot delivery, review design, and operator rollout."
             />
             <p className="body-copy">
-              Projects usually start with one narrow workflow that can prove
-              value quickly. Once the workflow is stable, Quanta expands the
-              system into adjacent queues, roles, or reporting layers that share
-              the same signal.
+              Most engagements begin with one workflow that can prove value
+              quickly. Once that workflow is stable, the system can expand into
+              adjacent queues, roles, or reporting layers that share the same
+              signal.
             </p>
             <p className="body-copy">
-              The objective is not to replace operators. It is to remove manual
-              drag, improve decision quality, and give leadership cleaner
-              visibility into how the workflow is performing.
+              The objective is not to replace operators. It is to reduce manual
+              drag, improve decision quality, and give leadership clearer
+              visibility into how the work is performing.
             </p>
             <Link href="/contact" className="text-link">
-              Scope an engagement
+              Discuss your priorities
             </Link>
           </div>
 
@@ -136,8 +136,8 @@ export default function ServicesPage() {
         <div className="container">
           <CtaBanner
             eyebrow="Planning Session"
-            title="Need clarity on the first workflow worth building?"
-            description="Quanta can map the signal, rank the opportunities, and define a rollout plan leadership can approve with confidence."
+            title="Need a clear starting point?"
+            description="Quanta can map the signal, rank the opportunities, and define a rollout plan leadership can approve without overcommitting the organization."
             primary={{ href: "/contact", label: "Book a Consultation" }}
             secondary={{ href: "/case-studies", label: "Review Case Studies" }}
           />

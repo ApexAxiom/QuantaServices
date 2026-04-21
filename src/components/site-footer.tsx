@@ -14,13 +14,12 @@ export function SiteFooter() {
               </span>
             </Link>
             <p className="body-copy">
-              Operational AI advisory for infrastructure, field service,
-              logistics, and shared-services leaders seeking measurable
-              workflow improvement.
+              Operational AI advisory for leaders responsible for throughput,
+              decision quality, and measurable workflow improvement.
             </p>
             <ul className="footer-list">
               <li>Strategy, workflow design, and implementation support.</li>
-              <li>Focused on decision quality, throughput, and operating trust.</li>
+              <li>Built for measurable business outcomes, not vague pilots.</li>
               <li>Supporting distributed teams across North America.</li>
             </ul>
           </div>
