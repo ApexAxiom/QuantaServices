@@ -18,7 +18,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Quanta"
         title="Built for teams that need AI programs grounded in operating reality."
-        description="Quanta Services was created to close the gap between AI ambition and operational execution. The firm works with industrial and service organizations that need measurable workflow change, not polished theory."
+        description="Quanta Services was created to close the gap between AI ambition and operational execution. The firm partners with industrial and service organizations that require measurable workflow improvement, not polished theory."
         actions={[
           { href: "/contact", label: "Meet the Team" },
           { href: "/case-studies", label: "See Results", variant: "secondary" },
@@ -49,7 +49,7 @@ export default function AboutPage() {
             <SectionHeading
               eyebrow="Firm Story"
               title="Strategy is only useful if it survives contact with the workflow."
-              description="Quanta combines operating-model rigor with practical AI implementation planning so teams can move from idea to live system with fewer false starts."
+              description="Quanta combines operating-model rigor with practical implementation planning so teams can move from concept to live system with fewer false starts."
             />
             <p className="body-copy">
               The firm’s point of view is simple: most AI value sits inside the
@@ -67,7 +67,7 @@ export default function AboutPage() {
             <SectionHeading
               eyebrow="Delivery Model"
               title="Senior advisory, distributed execution."
-              description="Quanta supports operators across regional networks, shared-services centers, and leadership teams without turning distance into delivery friction."
+              description="Quanta supports operators across regional networks, shared-services centers, and leadership teams with a delivery model built for complex organizations."
             />
             <p className="body-copy">
               The firm is designed for teams that care less about geography and
@@ -83,7 +83,7 @@ export default function AboutPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Operating Principles"
-            title="A small set of rules that keep delivery credible."
+            title="Clear principles that keep delivery credible."
             description="Quanta’s work is shaped by the same principles whether the engagement is a strategy sprint, workflow automation build, or broader operating roadmap."
           />
 
@@ -138,7 +138,7 @@ export default function AboutPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Client Voice"
-            title="Quanta is at its best when operating teams start trusting the system."
+            title="What clients say when the workflow starts working."
             description="The strongest feedback comes from teams that feel the workflow change directly in their day-to-day work."
           />
 
@@ -162,7 +162,7 @@ export default function AboutPage() {
           <CtaBanner
             eyebrow="Start With Quanta"
             title="Need an AI partner that can speak to operators and executives in the same room?"
-            description="Quanta can help frame the roadmap, pressure-test the workflow, and design an implementation path that works for both the frontline and leadership."
+            description="Quanta can help frame the roadmap, test the workflow, and define an implementation path that works for both frontline teams and leadership."
             primary={{ href: "/contact", label: "Contact Quanta" }}
             secondary={{ href: "/services", label: "Review Services" }}
           />

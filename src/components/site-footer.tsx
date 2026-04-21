@@ -15,11 +15,11 @@ export function SiteFooter() {
             </Link>
             <p className="body-copy">
               Operational AI advisory for infrastructure, field service,
-              logistics, and shared-services leaders who need measurable
+              logistics, and shared-services leaders seeking measurable
               workflow improvement.
             </p>
             <ul className="footer-list">
-              <li>Strategy, workflow design, and production rollout support.</li>
+              <li>Strategy, workflow design, and implementation support.</li>
               <li>Focused on decision quality, throughput, and operating trust.</li>
               <li>Supporting distributed teams across North America.</li>
             </ul>

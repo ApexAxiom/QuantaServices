@@ -70,7 +70,7 @@ export const heroStats: Stat[] = [
   {
     value: "91%",
     label: "priority workflow signal captured",
-    support: "We map the operators, documents, systems, and exceptions behind real decisions.",
+    support: "We map the operators, documents, systems, and exceptions that shape real decisions.",
   },
   {
     value: "34%",
@@ -80,7 +80,7 @@ export const heroStats: Stat[] = [
   {
     value: "8.5 wks",
     label: "median pilot launch window",
-    support: "Quanta scopes for deployment, not theater, so teams reach production faster.",
+    support: "Quanta scopes for deployment rather than demonstration, so teams reach production faster.",
   },
   {
     value: "+28%",
@@ -116,7 +116,7 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "Operational AI Strategy",
     summary:
-      "Translate executive AI goals into a ranked pipeline of workflows, decisions, and systems worth automating first.",
+      "Translate executive AI priorities into a ranked portfolio of workflows, decisions, and systems worth addressing first.",
     bullets: [
       "Signal mapping across field, finance, service, and reporting teams",
       "Use-case prioritization by speed-to-value and operational risk",
@@ -140,7 +140,7 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "AI Copilots",
     summary:
-      "Deploy role-based copilots for dispatch, shared services, account teams, and operating leaders who need faster answers.",
+      "Deploy role-specific copilots for dispatch, shared services, account teams, and operating leaders who need faster answers.",
     bullets: [
       "Grounded search over SOPs, notes, forms, and historical cases",
       "Decision support with recommended next steps and rationale",
@@ -152,7 +152,7 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "Data Foundations",
     summary:
-      "Shape fragmented operational data into structures AI systems can trust without launching a full re-platform.",
+      "Prepare fragmented operational data for trustworthy AI systems without forcing a full re-platforming effort.",
     bullets: [
       "Data readiness audits for unstructured and semi-structured inputs",
       "Lightweight pipelines for retrieval, monitoring, and reporting",
@@ -164,7 +164,7 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "Governance & Rollout",
     summary:
-      "Build guardrails, review flows, and adoption plans that make AI systems credible in production.",
+      "Establish guardrails, review flows, and adoption plans that make AI systems credible in production.",
     bullets: [
       "Human-in-the-loop controls for sensitive decisions and exceptions",
       "Quality monitoring, fallback paths, and escalation thresholds",
@@ -176,7 +176,7 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "Performance Analytics",
     summary:
-      "Surface where the system is helping, where it is drifting, and which workflows should expand next.",
+      "Show where the system is helping, where it is drifting, and which workflows warrant expansion next.",
     bullets: [
       "Outcome dashboards for speed, workload, quality, and savings",
       "Continuous tuning based on real production feedback",
@@ -403,7 +403,7 @@ export const valuePoints = [
   {
     title: "Operational empathy",
     summary:
-      "We design for dispatchers, coordinators, analysts, and leaders working through real constraints, not idealized process maps.",
+      "We design for dispatchers, coordinators, analysts, and leaders working within real constraints rather than idealized process maps.",
     icon: "layers" as const,
   },
   {
@@ -430,7 +430,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "How quickly can Quanta launch a meaningful pilot?",
     answer:
-      "Most pilots land inside four to eight weeks when the target workflow is specific, the review path is clear, and the required systems are reachable.",
+      "Most pilots launch within four to eight weeks when the target workflow is specific, the review path is clear, and the required systems are accessible.",
   },
   {
     question: "Do you work with the tools a team already has?",

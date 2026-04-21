@@ -18,8 +18,8 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Service lines built for industrial teams that need AI to work in production."
-        description="Quanta Services combines strategy, design, and execution support so the right workflows move first, operators stay involved, and value becomes visible early."
+        title="Services designed for industrial teams that expect AI to work in production."
+        description="Quanta Services combines strategy, workflow design, and execution support so the right work moves first, operators stay involved, and value becomes visible early."
         actions={[
           { href: "/contact", label: "Talk to Quanta" },
           { href: "/case-studies", label: "Review Wins", variant: "secondary" },
@@ -50,7 +50,7 @@ export default function ServicesPage() {
           <SectionHeading
             eyebrow="Service Pillars"
             title="Each engagement is shaped around the workflow, the operator, and the business metric."
-            description="Quanta does not sell generic AI packages. It scopes around the decisions, documents, exceptions, and systems that actually control throughput."
+            description="Quanta does not sell generic AI packages. Engagements are scoped around the decisions, documents, exceptions, and systems that determine throughput."
           />
 
           <div className="service-grid">
@@ -76,7 +76,7 @@ export default function ServicesPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Industry Fit"
-            title="Best fit for teams balancing real-world complexity with high decision volume."
+            title="Designed for teams balancing real-world complexity with high decision volume."
             description="Quanta’s delivery model is strongest where workflows span documents, human review, legacy systems, and operating pressure."
           />
 
@@ -99,8 +99,8 @@ export default function ServicesPage() {
           <div className="story-panel">
             <SectionHeading
               eyebrow="Engagement Model"
-              title="Advisory plus execution support."
-              description="Quanta can help leadership choose where to move first, but the work is designed to continue through pilot delivery, review logic, and operator rollout."
+              title="Advisory with execution support."
+              description="Quanta helps leadership decide where to move first and then carries the work through pilot delivery, review logic, and operator rollout."
             />
             <p className="body-copy">
               Projects usually start with one narrow workflow that can prove
@@ -136,9 +136,9 @@ export default function ServicesPage() {
         <div className="container">
           <CtaBanner
             eyebrow="Planning Session"
-            title="Need clarity on the first AI workflow worth building?"
-            description="Quanta can help map the signal, rank the workflow opportunities, and define a rollout plan that leadership can approve without guesswork."
-            primary={{ href: "/contact", label: "Book a Strategy Call" }}
+            title="Need clarity on the first workflow worth building?"
+            description="Quanta can map the signal, rank the opportunities, and define a rollout plan leadership can approve with confidence."
+            primary={{ href: "/contact", label: "Book a Consultation" }}
             secondary={{ href: "/case-studies", label: "Review Case Studies" }}
           />
         </div>

@@ -8,7 +8,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Case Studies",
   description:
-    "Review anonymized AI consulting wins across dispatch, finance intake, knowledge systems, and leadership reporting.",
+    "Review representative operational AI engagements across dispatch, finance intake, knowledge systems, and executive reporting.",
 };
 
 export default function CaseStudiesPage() {
@@ -18,8 +18,8 @@ export default function CaseStudiesPage() {
     <>
       <PageHero
         eyebrow="Case Studies"
-        title="Anonymized wins that show how operational AI performs when it is deployed correctly."
-        description="Quanta focuses on workflows with visible drag: triage, intake, reporting, knowledge retrieval, and exception-heavy decision chains. These examples show the kinds of outcomes that follow."
+        title="Representative work showing how operational AI performs when it is deployed with discipline."
+        description="Quanta focuses on workflows with visible drag: triage, intake, reporting, knowledge retrieval, and exception-heavy decision chains. These examples illustrate the operating outcomes that follow."
         actions={[
           { href: "/contact", label: "Discuss Your Workflow" },
           { href: "/services", label: "See Service Model", variant: "secondary" },
@@ -97,7 +97,7 @@ export default function CaseStudiesPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Additional Wins"
-            title="More examples of where AI creates immediate operating leverage."
+            title="Additional examples of immediate operating leverage."
             description="These programs were built around one contained workflow at a time and then expanded once the business case was proven."
           />
 
@@ -140,7 +140,7 @@ export default function CaseStudiesPage() {
         <div className="container">
           <CtaBanner
             eyebrow="Apply This"
-            title="Bring the same operating discipline to your own workflow."
+            title="Apply the same operating discipline to your own workflow."
             description="If your team has a queue that drags, a reporting cycle that takes too long, or a decision path buried in documents and emails, Quanta can help scope the right AI system around it."
             primary={{ href: "/contact", label: "Talk Through the Workflow" }}
             secondary={{ href: "/services", label: "See Capabilities" }}

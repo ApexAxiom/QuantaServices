@@ -16,8 +16,8 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Bring the workflow. Quanta will help identify the right AI move."
-        description="Use the form below to describe the operational bottleneck, backlog, reporting drag, or AI opportunity you want to explore. A detailed business case is not required."
+        title="Bring the workflow. Quanta will help define the right AI move."
+        description="Use the form below to describe the operating bottleneck, backlog, reporting friction, or AI opportunity you want to assess. A formal business case is not required."
         pills={[
           "Response within one business day",
           "Private inquiry routing",
@@ -43,9 +43,9 @@ export default function ContactPage() {
           <div className="contact-panel">
             <h2>Start the conversation</h2>
             <p className="form-copy">
-              Tell Quanta where the process slows down, where your team is
-              buried in manual review, or where reporting still depends on too
-              many spreadsheets and status meetings.
+              Tell Quanta where the process slows down, where manual review is
+              consuming time, or where reporting still depends on spreadsheets
+              and status meetings.
             </p>
             <ContactForm />
           </div>
@@ -76,8 +76,8 @@ export default function ContactPage() {
         <div className="container">
           <SectionHeading
             eyebrow="FAQ"
-            title="A few questions teams usually ask before they reach out."
-            description="If you already know the workflow you want to improve, the quickest next move is to send the brief and let Quanta shape the first pass."
+            title="Questions teams usually ask before reaching out."
+            description="If you already know the workflow you want to improve, the fastest next step is to send a brief and let Quanta shape the initial scope."
           />
 
           <div className="faq-grid">

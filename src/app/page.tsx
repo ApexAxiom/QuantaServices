@@ -26,7 +26,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Operational AI Advisory"
               title={"Operational clarity.\nMeasured results."}
-              description="Quanta helps infrastructure, field service, and industrial leaders design AI systems that reduce backlog, improve decision quality, and move into production with discipline."
+              description="Quanta advises infrastructure, field service, and industrial leaders on AI systems that reduce backlog, strengthen decision-making, and move into production with discipline."
               level="h1"
             />
 
@@ -40,9 +40,9 @@ export default function HomePage() {
             </div>
 
             <ul className="hero-proof-list">
-              <li>Workflow strategy tied to measurable KPIs</li>
-              <li>Automation and copilots designed around review paths</li>
-              <li>Rollout plans shaped for teams operating under real constraints</li>
+              <li>Prioritized workflow strategy tied to measurable KPIs</li>
+              <li>Automation and copilots designed around clear review paths</li>
+              <li>Rollout plans built for real operating constraints</li>
             </ul>
           </div>
 
@@ -60,8 +60,8 @@ export default function HomePage() {
               <div className="hero-sculpture-copy">
                 <span className="eyebrow">Delivery Focus</span>
                 <p>
-                  Strategy, workflow design, and deployment structure aligned
-                  inside one operating model.
+                  Strategy, workflow design, and implementation planning aligned
+                  within a single operating model.
                 </p>
               </div>
             </div>
@@ -95,8 +95,8 @@ export default function HomePage() {
           <div>
             <SectionHeading
               eyebrow="What We Do"
-              title={"End-to-end\noperational AI consulting."}
-              description="From strategy through workflow design and deployment, Quanta helps organizations turn AI interest into measured operating performance."
+              title={"End-to-end\noperational AI advisory."}
+              description="From strategy through workflow design and rollout, Quanta helps organizations convert AI interest into measurable operating performance."
             />
             <Link href="/services" className="text-link">
               View all services
@@ -127,8 +127,8 @@ export default function HomePage() {
           <div className="results-heading-row">
             <SectionHeading
               eyebrow="Selected Outcomes"
-              title={"Business results.\nOperational discipline."}
-              description="The fastest wins come from narrow systems designed around real queues, documents, approvals, and exception paths."
+              title={"Measured outcomes.\nOperational rigor."}
+              description="Quanta’s strongest results come from tightly scoped systems built around real queues, documents, approvals, and exception paths."
             />
             <Link href="/case-studies" className="button button-secondary">
               View All Case Studies
@@ -161,8 +161,8 @@ export default function HomePage() {
         <div className="container">
           <CtaBanner
             eyebrow="Next Step"
-            title="Ready to focus on the workflow that matters most?"
-            description="Quanta can help define the highest-leverage operating signal, the right review model, and a rollout path leadership can support with confidence."
+            title="Ready to define the workflow that matters most?"
+            description="Quanta can help identify the highest-leverage operating signal, establish the right review model, and define a rollout path leadership can support with confidence."
             primary={{ href: "/contact", label: "Book a Consultation" }}
             secondary={{ href: "/services", label: "Review Services" }}
           />

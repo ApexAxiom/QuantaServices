@@ -288,7 +288,7 @@ img {
 .brand-wordmark {
   display: inline-flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .brand-wordmark strong {
@@ -302,7 +302,8 @@ img {
 }
 
 .brand-wordmark span {
-  padding-left: 0.42em;
+  margin-top: -1px;
+  padding-left: 0.36em;
   color: var(--text-muted);
   font-size: 0.58rem;
   font-weight: 700;
@@ -412,6 +413,11 @@ img {
     linear-gradient(180deg, rgba(26, 21, 16, 0.96), rgba(14, 11, 9, 0.98)),
     linear-gradient(135deg, rgba(214, 179, 137, 0.06), transparent 52%);
   box-shadow: var(--shadow);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
 }
 
 .hero-stage {
@@ -603,6 +609,11 @@ img {
   color: var(--accent-strong);
   background: linear-gradient(135deg, rgba(214, 179, 137, 0.16), rgba(255, 255, 255, 0.04));
   border: 1px solid rgba(214, 179, 137, 0.16);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
 }
 
 .service-card h3,
@@ -696,6 +707,10 @@ img {
   background: linear-gradient(180deg, rgba(16, 13, 10, 0.82), rgba(10, 8, 7, 0.98));
   overflow: hidden;
   box-shadow: var(--shadow);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
 }
 
 .result-card > * {
@@ -715,6 +730,10 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.46;
+  transform: scale(1);
+  transition:
+    transform 260ms ease,
+    opacity 260ms ease;
 }
 
 .result-card::after {
@@ -820,6 +839,10 @@ img {
   border-radius: 22px;
   border: 1px solid rgba(214, 179, 137, 0.12);
   background: rgba(18, 14, 11, 0.78);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
 }
 
 .timeline-step strong {
@@ -982,6 +1005,10 @@ img {
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(214, 179, 137, 0.1);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
 }
 
 .case-result strong {
@@ -1259,6 +1286,51 @@ img {
   display: inline-flex;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+@media (hover: hover) {
+  .story-panel:hover,
+  .page-hero-card:hover,
+  .feature-band:hover,
+  .cta-banner:hover,
+  .contact-panel:hover,
+  .contact-aside:hover,
+  .footer-card:hover,
+  .case-card:hover,
+  .stat-card:hover,
+  .metric-card:hover,
+  .service-card:hover,
+  .process-card:hover,
+  .lane-card:hover,
+  .team-card:hover,
+  .testimonial-card:hover,
+  .value-card:hover,
+  .faq-card:hover,
+  .timeline-step:hover,
+  .case-result:hover,
+  .result-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(231, 205, 168, 0.28);
+    box-shadow:
+      0 34px 90px rgba(0, 0, 0, 0.5),
+      0 0 28px rgba(214, 179, 137, 0.08);
+  }
+
+  .service-card:hover .card-icon,
+  .lane-card:hover .card-icon,
+  .value-card:hover .card-icon,
+  .team-card:hover .card-icon,
+  .faq-card:hover .card-icon,
+  .stat-card:hover .card-icon {
+    transform: translateY(-1px);
+    border-color: rgba(231, 205, 168, 0.26);
+    box-shadow: 0 10px 28px rgba(214, 179, 137, 0.12);
+  }
+
+  .result-card:hover::before {
+    opacity: 0.52;
+    transform: scale(1.03);
+  }
 }
 
 .muted {
