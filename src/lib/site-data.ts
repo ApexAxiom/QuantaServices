@@ -69,13 +69,13 @@ export const navLinks = [
 export const heroStats: Stat[] = [
   {
     value: "91%",
-    label: "signal capture across priority workflows",
-    support: "We map the operators, documents, systems, and exceptions that drive real decisions.",
+    label: "priority workflow signal captured",
+    support: "We map the operators, documents, systems, and exceptions behind real decisions.",
   },
   {
     value: "34%",
-    label: "average cycle-time lift in targeted processes",
-    support: "Most gains come from small operational bottlenecks that compound into speed and margin.",
+    label: "average cycle-time improvement",
+    support: "Most gains come from removing small operational bottlenecks that compound into speed and margin.",
   },
   {
     value: "8.5 wks",
@@ -84,7 +84,7 @@ export const heroStats: Stat[] = [
   },
   {
     value: "+28%",
-    label: "gross-margin visibility in reporting workstreams",
+    label: "reporting visibility lift",
     support: "Executives get decision-ready metrics without the usual spreadsheet lag.",
   },
 ];
@@ -240,7 +240,7 @@ export const industryLanes = [
 export const caseStudies: CaseStudy[] = [
   {
     slug: "dispatch-command-center",
-    title: "Dispatch command center for a regional field-response operator",
+    title: "Dispatch Command Center AI",
     industry: "Utility field services",
     challenge:
       "Schedulers were juggling work orders, crew notes, outage updates, and customer emails across multiple systems before they could assign work.",
@@ -270,7 +270,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "invoice-intake",
-    title: "AI intake for invoice, statement, and exception handling",
+    title: "Invoice Intake and Exception Handling",
     industry: "Industrial distribution",
     challenge:
       "AP analysts were manually classifying invoices, matching supporting documents, and chasing exceptions across email chains and shared drives.",
@@ -299,7 +299,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "knowledge-assistant",
-    title: "Technician knowledge assistant built on SOPs and historical tickets",
+    title: "Technician Knowledge Assistant",
     industry: "Infrastructure services",
     challenge:
       "Supervisors and technicians were losing time searching PDFs, old tickets, and tribal knowledge before they could act on new jobs.",
@@ -328,7 +328,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "reporting-acceleration",
-    title: "Executive reporting acceleration across finance and operations",
+    title: "Executive Reporting Acceleration",
     industry: "Logistics network operator",
     challenge:
       "Leadership reporting depended on spreadsheets, slide assembly, and last-minute reconciliation before weekly operating reviews.",

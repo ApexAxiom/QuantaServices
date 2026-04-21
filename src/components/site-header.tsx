@@ -6,10 +6,9 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="container header-shell">
         <Link href="/" className="brand" aria-label="Quanta Services home">
-          <span className="brand-mark">Q</span>
-          <span className="brand-copy">
-            <strong>Quanta Services</strong>
-            <span>Chicago AI consulting for operators</span>
+          <span className="brand-wordmark">
+            <strong>Quanta</strong>
+            <span>Services</span>
           </span>
         </Link>
 
@@ -22,7 +21,7 @@ export function SiteHeader() {
         </nav>
 
         <Link href="/contact" className="button button-primary header-cta">
-          Book a Strategy Call
+          Book a Consultation
         </Link>
       </div>
     </header>

@@ -9,7 +9,7 @@ import { teamMembers, testimonials, valuePoints } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Quanta Services, a Chicago-based AI consulting firm focused on operational systems, workflow design, and production rollout.",
+    "Learn about Quanta Services, an operational AI advisory firm focused on workflow design, production systems, and measurable rollout.",
 };
 
 export default function AboutPage() {
@@ -17,25 +17,25 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About Quanta"
-        title="Built in Chicago for teams that need AI programs grounded in operating reality."
+        title="Built for teams that need AI programs grounded in operating reality."
         description="Quanta Services was created to close the gap between AI ambition and operational execution. The firm works with industrial and service organizations that need measurable workflow change, not polished theory."
         actions={[
           { href: "/contact", label: "Meet the Team" },
           { href: "/case-studies", label: "See Results", variant: "secondary" },
         ]}
         pills={[
-          "Chicago-based firm",
+          "Senior advisory team",
           "Industrial workflow focus",
-          "Operator-first design",
+          "Measured rollout design",
         ]}
         aside={
           <div className="page-hero-card">
             <div className="image-frame" style={{ minHeight: "340px" }}>
               <Image
-                src="/images/visuals/quanta-wave.png"
+                src="/images/visuals/gold-orbit-01.png"
                 alt="Quanta AI brand visualization"
                 fill
-                className="cover-image"
+                className="cover-image visual-artwork"
                 sizes="(max-width: 1100px) 100vw, 38vw"
               />
             </div>
@@ -65,15 +65,15 @@ export default function AboutPage() {
 
           <div className="story-panel">
             <SectionHeading
-              eyebrow="Location"
-              title="Chicago roots, distributed delivery."
-              description="Quanta is headquartered in Chicago and designed to support operators across regional networks, shared-services centers, and distributed leadership teams."
+              eyebrow="Delivery Model"
+              title="Senior advisory, distributed execution."
+              description="Quanta supports operators across regional networks, shared-services centers, and leadership teams without turning distance into delivery friction."
             />
             <p className="body-copy">
-              Chicago is part of the brand: practical, industrial, and focused
-              on output. The delivery model is built for teams who want their AI
-              initiatives tied to real throughput, response time, and margin
-              visibility.
+              The firm is designed for teams that care less about geography and
+              more about whether the work improves throughput, response time,
+              and reporting clarity. Engagements stay close to the workflow and
+              to the leaders accountable for the outcome.
             </p>
           </div>
         </div>

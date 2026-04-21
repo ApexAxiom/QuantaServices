@@ -8,7 +8,7 @@ import { faqItems } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Quanta Services to discuss workflow automation, operational AI, and AI consulting engagements for Chicago and distributed teams.",
+    "Contact Quanta Services to discuss workflow automation, operational AI, and advisory engagements for complex operating teams.",
 };
 
 export default function ContactPage() {
@@ -19,18 +19,18 @@ export default function ContactPage() {
         title="Bring the workflow. Quanta will help identify the right AI move."
         description="Use the form below to describe the operational bottleneck, backlog, reporting drag, or AI opportunity you want to explore. A detailed business case is not required."
         pills={[
-          "Chicago-based firm",
           "Response within one business day",
           "Private inquiry routing",
+          "North America coverage",
         ]}
         aside={
           <div className="page-hero-card">
             <div className="image-frame" style={{ minHeight: "340px" }}>
               <Image
-                src="/images/visuals/quanta-wave.png"
+                src="/images/visuals/gold-ribbon-01.png"
                 alt="Quanta contact visual"
                 fill
-                className="cover-image"
+                className="cover-image visual-artwork"
                 sizes="(max-width: 1100px) 100vw, 38vw"
               />
             </div>
@@ -58,8 +58,8 @@ export default function ContactPage() {
                 Most inquiries get an initial response within one business day.
               </li>
               <li>
-                <strong>Chicago-based delivery</strong>
-                Quanta works from Chicago and supports distributed operating
+                <strong>Distributed delivery</strong>
+                Quanta supports leadership, operations, and shared-services
                 teams across North America.
               </li>
               <li>

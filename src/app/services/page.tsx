@@ -34,10 +34,10 @@ export default function ServicesPage() {
           <div className="page-hero-card">
             <div className="image-frame" style={{ minHeight: "340px" }}>
               <Image
-                src="/images/visuals/platform-ecosystem.png"
+                src="/images/visuals/gold-growth-01.png"
                 alt="Connected AI platform illustration"
                 fill
-                className="cover-image"
+                className="cover-image visual-artwork"
                 sizes="(max-width: 1100px) 100vw, 38vw"
               />
             </div>

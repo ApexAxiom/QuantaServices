@@ -6,17 +6,22 @@ export function SiteFooter() {
     <footer className="footer">
       <div className="container">
         <div className="footer-grid">
-          <div className="footer-card">
-            <h3>Quanta Services</h3>
+          <div className="footer-card footer-brand-card">
+            <Link href="/" className="footer-brand" aria-label="Quanta Services home">
+              <span className="brand-wordmark">
+                <strong>Quanta</strong>
+                <span>Services</span>
+              </span>
+            </Link>
             <p className="body-copy">
-              Chicago-based AI consulting for industrial operators, logistics
-              teams, field service leaders, and shared-services groups that need
-              real workflow performance.
+              Operational AI advisory for infrastructure, field service,
+              logistics, and shared-services leaders who need measurable
+              workflow improvement.
             </p>
             <ul className="footer-list">
-              <li>Built for deployment, not vague AI theater.</li>
-              <li>Focused on workflow speed, decision quality, and adoption.</li>
-              <li>Serving Chicago and distributed teams across North America.</li>
+              <li>Strategy, workflow design, and production rollout support.</li>
+              <li>Focused on decision quality, throughput, and operating trust.</li>
+              <li>Supporting distributed teams across North America.</li>
             </ul>
           </div>
 
@@ -39,8 +44,8 @@ export function SiteFooter() {
         <div className="footer-bottom">
           <span>© 2026 Quanta Services. All rights reserved.</span>
           <span className="site-note">
-            <span>Chicago, Illinois</span>
-            <span>Operational AI consulting</span>
+            <span>North America</span>
+            <span>Operational AI advisory</span>
           </span>
         </div>
       </div>

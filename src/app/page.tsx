@@ -3,17 +3,19 @@ import Link from "next/link";
 import { CtaBanner } from "@/components/cta-banner";
 import { Icon } from "@/components/icons";
 import { SectionHeading } from "@/components/section-heading";
-import {
-  caseStudies,
-  companyStats,
-  heroStats,
-  processSteps,
-  serviceCards,
-  teamMembers,
-  testimonials,
-} from "@/lib/site-data";
+import { caseStudies, heroStats, serviceCards } from "@/lib/site-data";
 
-const featuredCase = caseStudies[0];
+const clientStrip = [
+  "Infrastructure Services",
+  "Field Operations",
+  "Logistics Networks",
+  "Capital Projects",
+  "Utilities",
+  "Shared Services",
+];
+
+const featuredServices = serviceCards.slice(0, 4);
+const featuredStudies = caseStudies.slice(0, 3);
 
 export default function HomePage() {
   return (
@@ -22,42 +24,51 @@ export default function HomePage() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <SectionHeading
-              eyebrow="Chicago AI Consulting"
-              title="Operational AI that clears backlog, sharpens decisions, and compounds margin."
-              description="Quanta Services helps industrial operators deploy AI across field workflows, shared services, and leadership reporting. We focus on the signal already inside your business and build systems your team can actually run."
+              eyebrow="Operational AI Advisory"
+              title={"Operational clarity.\nMeasured results."}
+              description="Quanta helps infrastructure, field service, and industrial leaders design AI systems that reduce backlog, improve decision quality, and move into production with discipline."
               level="h1"
             />
+
             <div className="button-row">
               <Link href="/contact" className="button button-primary">
-                Book a Strategy Call
+                Book a Consultation
               </Link>
-              <Link href="/case-studies" className="button button-secondary">
-                See Client Wins
+              <Link href="/services" className="button button-secondary">
+                Explore Services
               </Link>
             </div>
+
             <ul className="hero-proof-list">
-              <li>Field dispatch and work-order triage</li>
-              <li>Shared-services automation and intake</li>
-              <li>Grounded copilots for operators and analysts</li>
-              <li>Leadership reporting with same-day visibility</li>
+              <li>Workflow strategy tied to measurable KPIs</li>
+              <li>Automation and copilots designed around review paths</li>
+              <li>Rollout plans shaped for teams operating under real constraints</li>
             </ul>
           </div>
 
-          <div className="hero-panel animate-glow">
-            <div className="hero-visual-main">
+          <div className="hero-stage animate-glow">
+            <div className="hero-sculpture">
               <Image
-                src="/images/visuals/pipeline-growth.png"
-                alt="Operational AI pipeline visualization"
+                src="/images/visuals/gold-wave-hero.png"
+                alt="Abstract operational systems visualization"
                 fill
-                className="cover-image"
+                className="cover-image visual-artwork hero-art-image"
                 priority
                 sizes="(max-width: 1100px) 100vw, 48vw"
               />
+
+              <div className="hero-sculpture-copy">
+                <span className="eyebrow">Delivery Focus</span>
+                <p>
+                  Strategy, workflow design, and deployment structure aligned
+                  inside one operating model.
+                </p>
+              </div>
             </div>
 
             <div className="hero-panel-grid">
-              {heroStats.map((stat) => (
-                <article key={stat.label} className="stat-card animate-float">
+              {heroStats.slice(0, 3).map((stat) => (
+                <article key={stat.label} className="stat-card">
                   <p className="stat-value">{stat.value}</p>
                   <p className="stat-label">{stat.label}</p>
                   <p className="stat-detail">{stat.support}</p>
@@ -66,65 +77,34 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
 
-      <section className="page-section tight">
-        <div className="container story-grid">
-          <div>
-            <SectionHeading
-              eyebrow="Why Quanta"
-              title="Start where the signal is strongest and the payoff is measurable."
-              description="Big AI programs usually stall because the workflow, data, and operator reality never get aligned. Quanta starts with the smallest useful unit of work and turns it into a production-ready system."
-            />
-            <div className="story-panel">
-              <p className="body-copy">
-                The firm is built for industrial teams that do not need more
-                vague AI language. They need faster decisions, fewer manual
-                touches, tighter exception handling, and reporting leadership can
-                trust.
-              </p>
-              <p className="body-copy">
-                Quanta works across operations, finance, service, and executive
-                workflows to surface where AI should classify, recommend, route,
-                summarize, or draft, and where humans should retain final
-                control.
-              </p>
-              <div className="pill-row" style={{ marginTop: "20px" }}>
-                <span className="pill">
-                  <strong>Chicago-based</strong>
-                </span>
-                <span className="pill">
-                  <strong>Industrial ops focus</strong>
-                </span>
-                <span className="pill">
-                  <strong>Deployment-minded</strong>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="metric-grid">
-            {companyStats.map((stat) => (
-              <article key={stat.label} className="metric-card">
-                <p className="metric-value">{stat.value}</p>
-                <p className="metric-label">{stat.label}</p>
-                <p className="metric-support">{stat.support}</p>
-              </article>
+        <div className="container trust-band">
+          <span className="trust-kicker">
+            Built for complex operating environments
+          </span>
+          <div className="trust-strip">
+            {clientStrip.map((item) => (
+              <span key={item}>{item}</span>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="page-section" id="service-pillars">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Capabilities"
-            title="A consulting model built around real workflows."
-            description="Quanta blends strategy, implementation design, and operational rollout support so AI programs move from idea to measured output without losing the operator."
-          />
+      <section className="page-section">
+        <div className="container capability-layout">
+          <div>
+            <SectionHeading
+              eyebrow="What We Do"
+              title={"End-to-end\noperational AI consulting."}
+              description="From strategy through workflow design and deployment, Quanta helps organizations turn AI interest into measured operating performance."
+            />
+            <Link href="/services" className="text-link">
+              View all services
+            </Link>
+          </div>
 
-          <div className="service-grid">
-            {serviceCards.map((service) => (
+          <div className="capability-grid">
+            {featuredServices.map((service) => (
               <article key={service.title} className="service-card">
                 <span className="card-icon">
                   <Icon name={service.icon} />
@@ -132,13 +112,10 @@ export default function HomePage() {
                 <h3>{service.title}</h3>
                 <p className="body-copy">{service.summary}</p>
                 <ul className="card-list">
-                  {service.bullets.map((bullet) => (
+                  {service.bullets.slice(0, 2).map((bullet) => (
                     <li key={bullet}>{bullet}</li>
                   ))}
                 </ul>
-                <Link href="/services" className="service-cta">
-                  {service.ctaLabel}
-                </Link>
               </article>
             ))}
           </div>
@@ -146,141 +123,34 @@ export default function HomePage() {
       </section>
 
       <section className="page-section">
-        <div className="container process-grid">
-          <div className="process-visual">
-            <Image
-              src="/images/visuals/intelligence-brain.png"
-              alt="AI intelligence and analytics visualization"
-              fill
-              className="cover-image"
-              sizes="(max-width: 1100px) 100vw, 42vw"
-            />
-            <div className="process-visual-copy">
-              <span className="eyebrow">How Quanta Works</span>
-              <p className="body-copy">
-                The operating model is simple: identify the decisions that slow
-                the business down, build the narrowest useful AI system around
-                them, and expand only after the workflow proves itself.
-              </p>
-            </div>
-          </div>
-
-          <div>
+        <div className="container">
+          <div className="results-heading-row">
             <SectionHeading
-              eyebrow="Delivery Model"
-              title="A practical four-step path from signal to scale."
-              description="Quanta avoids sprawling AI programs by treating workflow design, governance, and measurement as part of the same system."
+              eyebrow="Selected Outcomes"
+              title={"Business results.\nOperational discipline."}
+              description="The fastest wins come from narrow systems designed around real queues, documents, approvals, and exception paths."
             />
-
-            <div className="timeline">
-              {processSteps.map((step, index) => (
-                <article key={step.title} className="timeline-step">
-                  <strong>{String(index + 1).padStart(2, "0")}</strong>
-                  <div>
-                    <h3>{step.title}</h3>
-                    <p className="body-copy">{step.summary}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
+            <Link href="/case-studies" className="button button-secondary">
+              View All Case Studies
+            </Link>
           </div>
-        </div>
-      </section>
 
-      <section className="page-section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Featured Win"
-            title="Proof that a tightly scoped AI system can move the whole operation."
-            description="Quanta’s best results come from improving the workflows operators touch every day and measuring the business impact immediately."
-          />
-
-          <article className="feature-band">
-            <div className="image-frame">
-              <Image
-                src={featuredCase.featuredImage!}
-                alt="Industrial logistics and operations case study"
-                fill
-                className="cover-image"
-                sizes="(max-width: 1100px) 100vw, 50vw"
-              />
-            </div>
-
-            <div className="feature-copy">
-              <span className="eyebrow">{featuredCase.industry}</span>
-              <h2>{featuredCase.title}</h2>
-              <p className="body-copy">{featuredCase.summary}</p>
-              <p className="body-copy">
-                <strong>Challenge:</strong> {featuredCase.challenge}
-              </p>
-              <p className="body-copy">
-                <strong>Solution:</strong> {featuredCase.solution}
-              </p>
-              <div className="metrics-row">
-                {featuredCase.metrics.map((metric) => (
-                  <span key={metric.label} className="metric-chip">
-                    <strong>{metric.value}</strong> {metric.label}
-                  </span>
-                ))}
-              </div>
-              <Link href="/case-studies" className="text-link">
-                Explore more case studies
-              </Link>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section className="page-section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Leadership"
-            title="A team that designs around operators, not just systems."
-            description="Quanta combines operating-model strategy, delivery execution, and applied AI design so programs move cleanly from concept to frontline use."
-          />
-
-          <div className="team-grid">
-            {teamMembers.map((member) => (
-              <article key={member.name} className="team-card">
-                <div className="team-media">
-                  <Image
-                    src={member.headshot}
-                    alt={member.name}
-                    fill
-                    className="cover-image"
-                    sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 30vw"
-                  />
+          <div className="results-showcase">
+            {featuredStudies.map((study, index) => (
+              <article
+                key={study.slug}
+                className={`result-card result-card-${index + 1}`}
+              >
+                <span className="result-industry">{study.industry}</span>
+                <h3>{study.title}</h3>
+                <p className="body-copy">{study.summary}</p>
+                <div className="result-metric">
+                  <strong>{study.metrics[0].value}</strong>
+                  <span>{study.metrics[0].label}</span>
                 </div>
-                <div>
-                  <h3>{member.name}</h3>
-                  <p className="team-role">{member.title}</p>
-                  <p className="body-copy" style={{ marginTop: "12px" }}>
-                    {member.bio}
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="page-section tight">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Client Perspective"
-            title="What operating leaders say when the system starts working."
-            description="The strongest validation is when teams stop talking about AI as a concept and start relying on it inside the workflow."
-          />
-
-          <div className="testimonial-grid">
-            {testimonials.map((testimonial) => (
-              <article key={testimonial.author} className="testimonial-card">
-                <blockquote>“{testimonial.quote}”</blockquote>
-                <cite>
-                  {testimonial.author}
-                  <br />
-                  {testimonial.role}
-                </cite>
+                <Link href={`/case-studies#${study.slug}`} className="service-cta">
+                  View case study
+                </Link>
               </article>
             ))}
           </div>
@@ -290,11 +160,11 @@ export default function HomePage() {
       <section className="page-section tight">
         <div className="container">
           <CtaBanner
-            eyebrow="Next Move"
-            title="Turn a workflow bottleneck into a measurable AI win."
-            description="If your team is stuck between AI interest and actual deployment, Quanta can identify the right operating signal, define the workflow, and design a rollout path that leadership and operators both trust."
-            primary={{ href: "/contact", label: "Start the Conversation" }}
-            secondary={{ href: "/services", label: "See the Service Model" }}
+            eyebrow="Next Step"
+            title="Ready to focus on the workflow that matters most?"
+            description="Quanta can help define the highest-leverage operating signal, the right review model, and a rollout path leadership can support with confidence."
+            primary={{ href: "/contact", label: "Book a Consultation" }}
+            secondary={{ href: "/services", label: "Review Services" }}
           />
         </div>
       </section>
