@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import {
   Cormorant_Garamond,
   IBM_Plex_Mono,
@@ -65,6 +65,12 @@ export const metadata: Metadata = {
       "Operational AI for complex teams that need faster decisions and measurable business results.",
     images: ["/images/visuals/gold-wave-hero.png"],
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({

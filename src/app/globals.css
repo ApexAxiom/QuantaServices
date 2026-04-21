@@ -175,6 +175,7 @@ img {
   line-height: 0.96;
   letter-spacing: -0.04em;
   white-space: pre-line;
+  text-wrap: balance;
 }
 
 .section-heading h2 {
@@ -187,6 +188,7 @@ img {
   color: var(--text-soft);
   font-size: 1.04rem;
   line-height: 1.78;
+  max-width: 64ch;
 }
 
 .button-row {
@@ -288,7 +290,7 @@ img {
 .brand-wordmark {
   display: inline-flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 5px;
 }
 
 .brand-wordmark strong {
@@ -296,18 +298,18 @@ img {
   font-family: var(--font-heading);
   font-size: 2.05rem;
   font-weight: 500;
-  line-height: 0.8;
+  line-height: 0.82;
   letter-spacing: 0.22em;
   text-transform: uppercase;
 }
 
 .brand-wordmark span {
-  margin-top: -1px;
-  padding-left: 0.36em;
+  padding-left: 0.34em;
   color: var(--text-muted);
   font-size: 0.58rem;
   font-weight: 700;
-  letter-spacing: 0.52em;
+  letter-spacing: 0.46em;
+  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -334,7 +336,7 @@ img {
 }
 
 .hero-section {
-  padding: 72px 0 46px;
+  padding: 52px 0 40px;
 }
 
 .hero-grid,
@@ -350,13 +352,29 @@ img {
   align-items: start;
 }
 
+.hero-grid > *,
+.story-grid > *,
+.process-grid > *,
+.feature-band > *,
+.page-hero-grid > *,
+.contact-grid > *,
+.split-grid > *,
+.capability-layout > * {
+  min-width: 0;
+}
+
 .hero-grid {
   grid-template-columns: minmax(0, 1fr) minmax(360px, 0.98fr);
-  align-items: center;
+  align-items: start;
 }
 
 .hero-copy .section-heading {
   margin-bottom: 0;
+}
+
+.hero-copy {
+  max-width: 640px;
+  padding-top: 8px;
 }
 
 .hero-proof-list {
@@ -428,7 +446,7 @@ img {
 
 .hero-sculpture {
   position: relative;
-  min-height: 430px;
+  min-height: 410px;
   overflow: hidden;
   border-radius: 24px;
   border: 1px solid rgba(214, 179, 137, 0.16);
@@ -538,8 +556,8 @@ img {
 }
 
 .trust-band {
-  margin-top: 42px;
-  padding-top: 24px;
+  margin-top: 30px;
+  padding-top: 22px;
   border-top: 1px solid rgba(214, 179, 137, 0.1);
 }
 
@@ -920,7 +938,7 @@ img {
 }
 
 .page-hero {
-  padding: 68px 0 18px;
+  padding: 56px 0 10px;
 }
 
 .page-hero-grid {
@@ -1404,30 +1422,43 @@ img {
   }
 
   .primary-nav {
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .header-cta {
-    justify-self: start;
+    justify-self: center;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    padding-top: 0;
   }
 }
 
 @media (max-width: 760px) {
   :root {
-    --container: min(100vw - 28px, 1180px);
+    --container: min(calc(100vw - 40px), 1180px);
   }
 
   .page-section {
-    padding: 74px 0;
+    padding: 60px 0;
   }
 
   .hero-section {
-    padding-top: 48px;
+    padding-top: 34px;
+    padding-bottom: 28px;
+  }
+
+  .page-hero {
+    padding-top: 34px;
+    padding-bottom: 4px;
   }
 
   .section-heading h1,
   .section-heading h2 {
-    font-size: clamp(2.4rem, 8vw, 4rem);
+    font-size: clamp(1.95rem, 9vw, 3.25rem);
+    line-height: 0.98;
+    letter-spacing: -0.03em;
   }
 
   .section-heading p,
@@ -1438,6 +1469,20 @@ img {
   .faq-card p,
   .hero-sculpture-copy p {
     font-size: 0.98rem;
+  }
+
+  .section-heading,
+  .hero-copy .section-heading {
+    margin-bottom: 24px;
+  }
+
+  .button-row {
+    gap: 12px;
+  }
+
+  .hero-proof-list {
+    margin-top: 20px;
+    gap: 10px;
   }
 
   .hero-panel-grid,
@@ -1464,11 +1509,55 @@ img {
   .page-hero-card,
   .footer-card,
   .result-card {
-    padding: 20px;
+    padding: 18px;
   }
 
   .hero-sculpture {
-    min-height: 360px;
+    min-height: 280px;
+  }
+
+  .hero-sculpture-copy {
+    inset: auto 14px 14px 14px;
+    max-width: none;
+    padding: 14px 16px;
+  }
+
+  .trust-band {
+    margin-top: 22px;
+    padding-top: 16px;
+  }
+
+  .trust-kicker {
+    margin-bottom: 14px;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+  }
+
+  .results-heading-row {
+    gap: 14px;
+  }
+
+  .page-hero-card {
+    padding: 18px;
+  }
+
+  .header-shell {
+    gap: 12px;
+  }
+
+  .primary-nav {
+    justify-content: center;
+    gap: 4px 8px;
+  }
+
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 0.89rem;
+  }
+
+  .header-cta {
+    width: 100%;
+    justify-self: stretch;
   }
 
   .button-row,
@@ -1483,15 +1572,20 @@ img {
 
   .brand-wordmark strong {
     font-size: 1.72rem;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.16em;
+    line-height: 0.86;
   }
 
   .brand-wordmark span {
-    font-size: 0.54rem;
+    padding-left: 0.28em;
+    font-size: 0.52rem;
+    letter-spacing: 0.34em;
   }
 
   .trust-strip span {
     border-left: 0;
     border-top: 1px solid rgba(214, 179, 137, 0.08);
+    padding: 10px 8px;
+    font-size: 0.72rem;
   }
 }
