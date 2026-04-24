@@ -3,7 +3,6 @@ import nodemailer from "nodemailer";
 import type { ContactFormRequest } from "@/lib/contact-types";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const defaultContactInbox = "emailmyconsultant@gmail.com";
 const smtpTimeoutMs = 12000;
 const allowedInterests = new Set([
   "Book a consultation",
@@ -82,7 +81,7 @@ export async function sendContactEmail(data: ContactFormRequest) {
   const secure = process.env.SMTP_SECURE === "true";
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASS;
-  const to = process.env.CONTACT_TO_EMAIL?.trim() || defaultContactInbox;
+  const to = process.env.CONTACT_TO_EMAIL?.trim();
   const from = process.env.SMTP_FROM || user;
 
   if (!host || !user || !pass || !to || !from) {
