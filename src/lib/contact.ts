@@ -4,6 +4,7 @@ import type { ContactFormRequest } from "@/lib/contact-types";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const defaultContactInbox = "emailmyconsultant@gmail.com";
+const smtpTimeoutMs = 12000;
 const allowedInterests = new Set([
   "Book a consultation",
   "Discuss a workflow problem",
@@ -92,6 +93,9 @@ export async function sendContactEmail(data: ContactFormRequest) {
     host,
     port,
     secure,
+    connectionTimeout: smtpTimeoutMs,
+    greetingTimeout: smtpTimeoutMs,
+    socketTimeout: smtpTimeoutMs,
     auth: {
       user,
       pass,

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition, type ChangeEvent, type FormEvent } from "react";
+import { useState, type ChangeEvent, type FormEvent } from "react";
 import type { ContactFormRequest, ContactResponse } from "@/lib/contact-types";
 
 type StatusState =
@@ -18,13 +18,15 @@ const initialForm: ContactFormRequest = {
   website: "",
 };
 
+const requestTimeoutMs = 15000;
+
 export function ContactForm() {
   const [form, setForm] = useState<ContactFormRequest>(initialForm);
   const [fieldErrors, setFieldErrors] = useState<
     Partial<Record<keyof ContactFormRequest, string>>
   >({});
   const [status, setStatus] = useState<StatusState>(null);
-  const [isPending, startTransition] = useTransition();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   function handleChange(
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
@@ -50,8 +52,12 @@ export function ContactForm() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus(null);
+    setIsSubmitting(true);
 
-    startTransition(async () => {
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), requestTimeoutMs);
+
+    void (async () => {
       try {
         const response = await fetch("/api/contact", {
           method: "POST",
@@ -59,6 +65,7 @@ export function ContactForm() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(form),
+          signal: controller.signal,
         });
 
         const payload = (await response.json()) as ContactResponse;
@@ -86,8 +93,11 @@ export function ContactForm() {
           message:
             "Your request could not be delivered right now. Please try again shortly.",
         });
+      } finally {
+        window.clearTimeout(timeout);
+        setIsSubmitting(false);
       }
-    });
+    })();
   }
 
   return (
@@ -218,8 +228,8 @@ export function ContactForm() {
           A short brief is enough. Quanta reviews each inquiry before the first
           consultation.
         </p>
-        <button type="submit" className="button button-primary" disabled={isPending}>
-          {isPending ? "Sending..." : "Request Consultation"}
+        <button type="submit" className="button button-primary" disabled={isSubmitting}>
+          {isSubmitting ? "Sending..." : "Request Consultation"}
         </button>
       </div>
 
