@@ -6,12 +6,12 @@ import { SectionHeading } from "@/components/section-heading";
 import { caseStudies, heroStats, serviceCards } from "@/lib/site-data";
 
 const clientStrip = [
-  "Infrastructure Services",
-  "Field Operations",
-  "Logistics Networks",
-  "Capital Projects",
-  "Utilities",
+  "Field Service",
+  "Dispatch",
+  "Finance Ops",
+  "Logistics",
   "Shared Services",
+  "Leadership Reporting",
 ];
 
 const featuredServices = serviceCards.slice(0, 4);
@@ -24,9 +24,9 @@ export default function HomePage() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <SectionHeading
-              eyebrow="Operational AI Advisory"
-              title={"AI for critical workflows.\nBuilt for measurable outcomes."}
-              description="If your teams are carrying too much manual work, inconsistent decisions, or reporting delays, Quanta helps you identify the right AI opportunities, design the operating model, and move into production with confidence."
+              eyebrow="Operational AI Consulting"
+              title={"AI systems for complex work.\nBuilt to prove value."}
+              description="Quanta helps operations, finance, and field-service leaders turn high-friction workflows into governed AI systems for intake, triage, reporting, knowledge retrieval, and exception handling."
               level="h1"
             />
 
@@ -40,9 +40,9 @@ export default function HomePage() {
             </div>
 
             <ul className="hero-proof-list">
-              <li>Prioritize the workflows where delay, rework, and manual review cost you most</li>
-              <li>Deploy automation and copilots with clear controls, review paths, and accountability</li>
-              <li>Give leadership a practical plan backed by measurable business impact</li>
+              <li>Start with one workflow, a baseline, and a business case leaders can inspect</li>
+              <li>Design human review, escalation, and fallback paths before rollout</li>
+              <li>Move from discovery to pilot with adoption and measurement built in</li>
             </ul>
           </div>
 
@@ -60,8 +60,8 @@ export default function HomePage() {
               <div className="hero-sculpture-copy">
                 <span className="eyebrow">Delivery Focus</span>
                 <p>
-                  From strategy through deployment, every engagement is built
-                  around the workflows your teams rely on every day.
+                  From discovery through deployment, every engagement is tied
+                  to the work your teams already run every day.
                 </p>
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function HomePage() {
 
         <div className="container trust-band">
           <span className="trust-kicker">
-            Relevant across complex operating environments
+            Built for high-accountability operating environments
           </span>
           <div className="trust-strip">
             {clientStrip.map((item) => (
@@ -95,8 +95,8 @@ export default function HomePage() {
           <div>
             <SectionHeading
               eyebrow="What We Do"
-              title={"Advisory that turns AI interest\ninto operating performance."}
-              description="You do not need a broad AI program to start seeing results. You need the right workflow, the right controls, and a rollout plan your teams will actually use."
+              title={"Turn a high-friction workflow\ninto a governed AI system."}
+              description="You do not need a broad AI program to begin. You need the right workflow, the right controls, and a rollout plan your teams can adopt without slowing the business."
             />
             <Link href="/services" className="text-link">
               View all services
@@ -127,8 +127,8 @@ export default function HomePage() {
           <div className="results-heading-row">
             <SectionHeading
               eyebrow="Selected Outcomes"
-              title={"Results leaders can defend.\nSystems teams can use."}
-              description="The strongest outcomes come from focused systems aligned to real workflows, clear ownership, and business goals that can be measured."
+              title={"Measured improvements,\nnot presentation-only pilots."}
+              description="The strongest outcomes come from focused systems aligned to real workflows, named owners, and business goals that can be measured after launch."
             />
             <Link href="/case-studies" className="button button-secondary">
               View All Case Studies
@@ -161,8 +161,8 @@ export default function HomePage() {
         <div className="container">
           <CtaBanner
             eyebrow="Next Step"
-            title="Ready to define the workflow that matters most?"
-            description="Quanta can help you identify the highest-value opportunity, define the right review model, and build a rollout plan leadership can support with confidence."
+            title="Ready to choose the right first workflow?"
+            description="Quanta can help identify the strongest opportunity, define the review model, and build a rollout plan leadership can support with confidence."
             primary={{ href: "/contact", label: "Book a Consultation" }}
             secondary={{ href: "/services", label: "Review Services" }}
           />

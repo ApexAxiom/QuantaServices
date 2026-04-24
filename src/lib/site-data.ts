@@ -68,24 +68,24 @@ export const navLinks = [
 
 export const heroStats: Stat[] = [
   {
-    value: "91%",
-    label: "priority workflow signal captured",
-    support: "We map the operators, documents, systems, and exceptions that shape the decisions your teams make every day.",
+    value: "2-3",
+    label: "weeks to scoped plan",
+    support: "Discovery focuses on the roles, documents, systems, and exceptions that shape daily decisions.",
   },
   {
-    value: "34%",
-    label: "average cycle-time improvement",
-    support: "The strongest gains often come from removing small operational bottlenecks that compound into speed and margin.",
+    value: "4-8",
+    label: "weeks to measured pilot",
+    support: "When data and system access are ready, pilots move quickly without skipping controls.",
   },
   {
-    value: "8.5 wks",
-    label: "median pilot launch window",
-    support: "Quanta scopes for deployment rather than demonstration, so your teams can reach production faster.",
+    value: "1",
+    label: "workflow before scale",
+    support: "A contained launch creates a cleaner business case and a smoother adoption path.",
   },
   {
-    value: "+28%",
-    label: "reporting visibility lift",
-    support: "Leadership gets decision-ready visibility without the usual spreadsheet lag.",
+    value: "Live",
+    label: "KPIs tracked from day one",
+    support: "Cycle time, touch rate, backlog, and exception volume stay visible through delivery.",
   },
 ];
 
@@ -116,11 +116,11 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "Operational AI Strategy",
     summary:
-      "Clarify where AI can create the most value across your workflows, systems, and teams.",
+      "Identify the workflows where AI can create measurable value without creating avoidable risk.",
     bullets: [
       "Assess operational bottlenecks, decision points, and handoffs",
       "Rank use cases by business value, risk, and feasibility",
-      "Define a roadmap leadership can approve and teams can execute",
+      "Define a roadmap leaders can approve and operators can use",
     ],
     icon: "signal",
     ctaLabel: "Define the right first moves",
@@ -128,7 +128,7 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "Workflow Automation",
     summary:
-      "Reduce manual routing, classification, approvals, and exception handling in the processes creating the most drag.",
+      "Reduce manual routing, classification, approvals, and exception handling in high-volume processes.",
     bullets: [
       "Document and inbox processing with clear human review paths",
       "Cross-system orchestration for ERP, CRM, and operations data",
@@ -140,7 +140,7 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "AI Copilots",
     summary:
-      "Give teams faster access to answers, context, and recommended next steps without weakening control.",
+      "Give teams faster access to answers, context, and recommended next steps while keeping people in control.",
     bullets: [
       "Grounded search over SOPs, notes, forms, and historical cases",
       "Decision support with recommended next steps and rationale",
@@ -152,7 +152,7 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "Data Foundations",
     summary:
-      "Prepare the data, documents, and operational context AI systems need to perform reliably.",
+      "Prepare the data, documents, and operating context AI systems need before they can be trusted.",
     bullets: [
       "Data readiness audits for unstructured and semi-structured inputs",
       "Lightweight pipelines for retrieval, monitoring, and reporting",
@@ -164,7 +164,7 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "Governance & Rollout",
     summary:
-      "Put the right controls, review paths, and adoption plan around every deployment.",
+      "Put practical controls, review paths, and adoption support around every deployment.",
     bullets: [
       "Human-in-the-loop controls for sensitive decisions and exceptions",
       "Quality monitoring, fallback paths, and escalation thresholds",
@@ -176,7 +176,7 @@ export const serviceCards: ServiceCard[] = [
   {
     title: "Performance Analytics",
     summary:
-      "Measure what is improving, where intervention is needed, and when expansion makes sense.",
+      "Measure what is improving, where intervention is needed, and when expansion is justified.",
     bullets: [
       "Outcome dashboards for speed, workload, quality, and savings",
       "Continuous tuning based on real production feedback",
@@ -189,24 +189,24 @@ export const serviceCards: ServiceCard[] = [
 
 export const processSteps: ProcessStep[] = [
   {
-    title: "Identify where value is being lost",
+    title: "Find the workflow with measurable drag",
     summary:
-      "We work with frontline and back-office teams to see where latency, rework, or manual effort is accumulating across the workflow.",
+      "We work with frontline and back-office teams to locate the queues, handoffs, and reviews that are slowing work down.",
   },
   {
-    title: "Design around the work and the control points",
+    title: "Design the system around control points",
     summary:
-      "We define where AI should classify, summarize, recommend, or draft, and where people should review, approve, or intervene.",
+      "We define where AI should classify, summarize, recommend, or draft, and where people must review, approve, or intervene.",
   },
   {
-    title: "Deploy in the real environment",
+    title: "Deploy inside the real operating environment",
     summary:
-      "Pilots launch inside the tools your teams already use, with measurable success criteria, exception paths, and operating visibility from day one.",
+      "Pilots launch inside the tools your teams already use, with success criteria, exception paths, and operating visibility from day one.",
   },
   {
     title: "Improve from production feedback",
     summary:
-      "Once a workflow is stable, we tune prompts, retrieval, logic, and reporting so throughput and trust continue to improve over time.",
+      "Once the workflow is stable, we tune prompts, retrieval, logic, and reporting so throughput and trust improve over time.",
   },
 ];
 
@@ -214,25 +214,25 @@ export const industryLanes = [
   {
     title: "Field Service & Dispatch",
     summary:
-      "Dispatch, work-order triage, service coordination, technician enablement, and exception management.",
+      "Dispatch, work-order triage, service coordination, technician enablement, and exceptions.",
     icon: "map" as const,
   },
   {
     title: "Logistics & Network Operations",
     summary:
-      "Document intake, ETA visibility, issue routing, operational reporting, and multi-system coordination.",
+      "Document intake, ETA visibility, issue routing, operating reports, and multi-system coordination.",
     icon: "layers" as const,
   },
   {
     title: "Shared Services & Finance",
     summary:
-      "Invoice capture, statement reconciliation, ticket handling, close support, and knowledge-intensive review work.",
+      "Invoice capture, statement reconciliation, ticket handling, close support, and review-heavy work.",
     icon: "clock" as const,
   },
   {
     title: "Operating Leadership",
     summary:
-      "Decision dashboards, narrative reporting, margin visibility, and AI governance for scale-up and enterprise teams.",
+      "Decision dashboards, narrative reporting, margin visibility, and AI governance for scaling teams.",
     icon: "chart" as const,
   },
 ];
@@ -401,27 +401,27 @@ export const testimonials: Testimonial[] = [
 
 export const valuePoints = [
   {
-    title: "Operational empathy",
+    title: "Workflow first",
     summary:
-      "We design for dispatchers, coordinators, analysts, and leaders working within real constraints rather than idealized process maps.",
+      "We design for dispatchers, coordinators, analysts, and leaders working inside real constraints.",
     icon: "layers" as const,
   },
   {
     title: "Metrics before hype",
     summary:
-      "Every engagement starts with cycle time, throughput, accuracy, margin visibility, or workload reduction goals your teams can verify.",
+      "Every engagement starts with cycle time, throughput, accuracy, visibility, or workload goals your teams can verify.",
     icon: "chart" as const,
   },
   {
     title: "Guardrails by default",
     summary:
-      "Sensitive workflows keep explicit review paths, exception thresholds, and fallback modes instead of trusting black-box automation.",
+      "Sensitive workflows keep explicit review paths, exception thresholds, and fallback modes.",
     icon: "shield" as const,
   },
   {
-    title: "Built for compounding gains",
+    title: "Built to scale carefully",
     summary:
-      "We start with contained workflows and expand only when the signal, governance, and adoption pattern are strong enough to scale.",
+      "We start with contained workflows and expand only when the signal, governance, and adoption pattern are ready.",
     icon: "spark" as const,
   },
 ];
@@ -430,12 +430,12 @@ export const faqItems: FAQItem[] = [
   {
     question: "How quickly can Quanta launch a meaningful pilot?",
     answer:
-      "Most pilots launch within four to eight weeks when the target workflow is specific, the review path is clear, and the required systems are accessible.",
+      "Most pilots can launch within four to eight weeks when the target workflow is specific, the review path is clear, and the required systems are accessible.",
   },
   {
     question: "Do you work with the tools a team already has?",
     answer:
-      "Yes. Quanta is built for environments that already run on ERP, CRM, ticketing, shared drives, email, and operational reporting systems. We shape around the stack instead of demanding a rebuild.",
+      "Yes. Quanta is built for environments that already run on ERP, CRM, ticketing, shared drives, email, and operating reports. We shape around the stack instead of demanding a rebuild.",
   },
   {
     question: "Do you only advise, or do you also implement?",
@@ -445,7 +445,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "What kinds of teams are the best fit?",
     answer:
-      "Industrial operators, field service groups, logistics teams, and shared-services functions with repetitive handoffs, document-heavy processes, or slow decision cycles.",
+      "Industrial operators, field service groups, logistics teams, and shared-services functions with repetitive handoffs, document-heavy processes, or slow decisions.",
   },
 ];
 

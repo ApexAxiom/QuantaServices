@@ -14,12 +14,12 @@ export function SiteFooter() {
               </span>
             </Link>
             <p className="body-copy">
-              Operational AI advisory for leaders responsible for throughput,
+              Operational AI consulting for leaders responsible for throughput,
               decision quality, and measurable workflow improvement.
             </p>
             <ul className="footer-list">
               <li>Strategy, workflow design, and implementation support.</li>
-              <li>Built for measurable business outcomes, not vague pilots.</li>
+              <li>Built for measured outcomes, not vague pilots.</li>
               <li>Supporting distributed teams across North America.</li>
             </ul>
           </div>
@@ -44,7 +44,7 @@ export function SiteFooter() {
           <span>© 2026 Quanta Services. All rights reserved.</span>
           <span className="site-note">
             <span>North America</span>
-            <span>Operational AI advisory</span>
+            <span>Operational AI consulting</span>
           </span>
         </div>
       </div>

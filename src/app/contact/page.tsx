@@ -16,8 +16,8 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Tell us where the work is slowing down."
-        description="Share the process, backlog, reporting issue, or decision bottleneck you want to improve. We will help you determine whether AI is the right lever and what a practical first step could look like."
+        title="Book a consultation."
+        description="Share the process, backlog, reporting issue, or decision bottleneck you want to improve. Quanta will help determine whether AI is the right lever and what a practical first step could look like."
         pills={[
           "Response within one business day",
           "Private inquiry routing",
@@ -65,7 +65,7 @@ export default function ContactPage() {
               <li>
                 <strong>Built for workflow clarity</strong>
                 A short brief is enough. Quanta can help shape the scope and
-                business case after the first conversation.
+                business case during the first conversation.
               </li>
             </ul>
           </aside>

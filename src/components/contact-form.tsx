@@ -9,6 +9,7 @@ type StatusState =
   | null;
 
 const initialForm: ContactFormRequest = {
+  interest: "Book a consultation",
   name: "",
   company: "",
   email: "",
@@ -26,7 +27,7 @@ export function ContactForm() {
   const [isPending, startTransition] = useTransition();
 
   function handleChange(
-    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    event: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
   ) {
     const { name, value } = event.target;
 
@@ -92,6 +93,26 @@ export function ContactForm() {
   return (
     <form className="contact-form" onSubmit={handleSubmit} noValidate>
       <div className="form-grid">
+        <div className="form-field-full">
+          <label className="form-label" htmlFor="interest">
+            Request Type
+          </label>
+          <select
+            id="interest"
+            name="interest"
+            className="form-input"
+            value={form.interest}
+            onChange={handleChange}
+          >
+            <option>Book a consultation</option>
+            <option>Discuss a workflow problem</option>
+            <option>Ask a project question</option>
+          </select>
+          {fieldErrors.interest ? (
+            <span className="field-error">{fieldErrors.interest}</span>
+          ) : null}
+        </div>
+
         <div className="form-field">
           <label className="form-label" htmlFor="name">
             Name
@@ -176,7 +197,7 @@ export function ContactForm() {
 
         <div className="form-field-full" id="brief">
           <label className="form-label" htmlFor="message">
-            What workflow or business problem should we look at?
+            What should we help you evaluate?
           </label>
           <textarea
             id="message"
@@ -184,7 +205,7 @@ export function ContactForm() {
             className="form-textarea"
             value={form.message}
             onChange={handleChange}
-            placeholder="Describe the workflow, backlog, reporting pain, or decision bottleneck you want to improve."
+            placeholder="Share the workflow, backlog, reporting issue, or decision bottleneck you want to improve."
           />
           {fieldErrors.message ? (
             <span className="field-error">{fieldErrors.message}</span>
@@ -194,11 +215,11 @@ export function ContactForm() {
 
       <div className="form-footer">
         <p className="form-note">
-          Quanta reviews every note manually. A short project brief is enough to
-          start the conversation.
+          A short brief is enough. Quanta reviews each inquiry before the first
+          consultation.
         </p>
         <button type="submit" className="button button-primary" disabled={isPending}>
-          {isPending ? "Sending..." : "Send Inquiry"}
+          {isPending ? "Sending..." : "Request Consultation"}
         </button>
       </div>
 

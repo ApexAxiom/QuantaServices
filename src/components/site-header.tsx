@@ -21,7 +21,7 @@ export function SiteHeader() {
         </nav>
 
         <Link href="/contact" className="button button-primary header-cta">
-          Book a Consultation
+          Book Consultation
         </Link>
       </div>
     </header>

@@ -3,6 +3,12 @@ import nodemailer from "nodemailer";
 import type { ContactFormRequest } from "@/lib/contact-types";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const defaultContactInbox = "emailmyconsultant@gmail.com";
+const allowedInterests = new Set([
+  "Book a consultation",
+  "Discuss a workflow problem",
+  "Ask a project question",
+]);
 
 function toTrimmedString(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
@@ -28,6 +34,7 @@ export function validateContactPayload(payload: unknown) {
 
   const record = payload as Record<string, unknown>;
   const data: ContactFormRequest = {
+    interest: toTrimmedString(record.interest) || "Book a consultation",
     name: toTrimmedString(record.name),
     company: toTrimmedString(record.company),
     email: toTrimmedString(record.email),
@@ -37,6 +44,10 @@ export function validateContactPayload(payload: unknown) {
   };
 
   const fieldErrors: Partial<Record<keyof ContactFormRequest, string>> = {};
+
+  if (!allowedInterests.has(data.interest)) {
+    fieldErrors.interest = "Please choose a request type.";
+  }
 
   if (!data.name) {
     fieldErrors.name = "Please enter your name.";
@@ -70,7 +81,7 @@ export async function sendContactEmail(data: ContactFormRequest) {
   const secure = process.env.SMTP_SECURE === "true";
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASS;
-  const to = process.env.CONTACT_TO_EMAIL;
+  const to = process.env.CONTACT_TO_EMAIL?.trim() || defaultContactInbox;
   const from = process.env.SMTP_FROM || user;
 
   if (!host || !user || !pass || !to || !from) {
@@ -90,6 +101,7 @@ export async function sendContactEmail(data: ContactFormRequest) {
   const htmlMessage = `
     <div style="font-family: Arial, sans-serif; color: #0f172a; line-height: 1.6;">
       <h2 style="margin-bottom: 16px;">New Quanta Services inquiry</h2>
+      <p><strong>Request type:</strong> ${escapeHtml(data.interest)}</p>
       <p><strong>Name:</strong> ${escapeHtml(data.name)}</p>
       <p><strong>Company:</strong> ${escapeHtml(data.company)}</p>
       <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
@@ -106,6 +118,7 @@ export async function sendContactEmail(data: ContactFormRequest) {
   const textMessage = [
     "New Quanta Services inquiry",
     "",
+    `Request type: ${data.interest}`,
     `Name: ${data.name}`,
     `Company: ${data.company}`,
     `Email: ${data.email}`,
@@ -121,7 +134,7 @@ export async function sendContactEmail(data: ContactFormRequest) {
     to,
     from,
     replyTo: `${data.name} <${data.email}>`,
-    subject: `New Quanta Services inquiry from ${data.company}`,
+    subject: `${data.interest} from ${data.company}`,
     text: textMessage,
     html: htmlMessage,
   });

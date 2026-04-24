@@ -17,10 +17,10 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About Quanta"
-        title="Built for companies that need AI programs grounded in operating reality."
-        description="Quanta Services was created for leadership teams that cannot afford vague pilots, stalled implementations, or disconnected strategy. The firm helps clients turn AI interest into systems that improve real work."
+        title="Built for leaders who need AI grounded in operating reality."
+        description="Quanta Services was created for teams that cannot afford vague pilots, stalled implementations, or disconnected strategy. The firm turns AI interest into systems that improve real work."
         actions={[
-          { href: "/contact", label: "Start a Conversation" },
+          { href: "/contact", label: "Book a Consultation" },
           { href: "/case-studies", label: "Review Results", variant: "secondary" },
         ]}
         pills={[
@@ -49,7 +49,7 @@ export default function AboutPage() {
             <SectionHeading
               eyebrow="Firm Story"
               title="Strategy is only useful if it survives contact with the workflow."
-              description="Clients come to Quanta when the opportunity is clear but the path to execution is not. The work is designed to close that gap without creating more noise."
+              description="Clients come to Quanta when the opportunity is clear but the path to execution is not. The work closes that gap without creating more noise."
             />
             <p className="body-copy">
               Most AI value sits inside the small decisions, repetitive reviews,
@@ -82,7 +82,7 @@ export default function AboutPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Operating Principles"
-            title="Clear principles that keep delivery credible."
+            title="Principles that keep delivery credible."
             description="These principles shape every engagement, whether the work is a strategy sprint, a workflow automation build, or a broader operating roadmap."
           />
 
@@ -161,8 +161,8 @@ export default function AboutPage() {
           <CtaBanner
             eyebrow="Start With Quanta"
             title="Need a partner that can work with operators and executives in the same room?"
-            description="Quanta can help frame the roadmap, pressure-test the workflow, and define an implementation path that works for both frontline teams and leadership."
-            primary={{ href: "/contact", label: "Start the Conversation" }}
+            description="Quanta can frame the roadmap, pressure-test the workflow, and define an implementation path that works for both frontline teams and leadership."
+            primary={{ href: "/contact", label: "Book a Consultation" }}
             secondary={{ href: "/services", label: "Review Services" }}
           />
         </div>

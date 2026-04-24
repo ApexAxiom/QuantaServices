@@ -1,20 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import {
-  Cormorant_Garamond,
-  IBM_Plex_Mono,
-  Manrope,
-} from "next/font/google";
+import { IBM_Plex_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-const headingFont = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-heading",
-  display: "swap",
-});
 const bodyFont = Manrope({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
@@ -31,11 +21,11 @@ const monoFont = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Quanta Services | Operational AI Advisory",
+    default: "Quanta Services | Operational AI Consulting",
     template: "%s | Quanta Services",
   },
   description:
-    "Operational AI advisory for infrastructure, field service, logistics, and shared-services teams seeking measurable workflow improvement.",
+    "Operational AI consulting for infrastructure, field service, logistics, and shared-services teams seeking measurable workflow improvement.",
   keywords: [
     "operational AI advisory",
     "AI consulting",
@@ -46,9 +36,9 @@ export const metadata: Metadata = {
     "workflow automation",
   ],
   openGraph: {
-    title: "Quanta Services | Operational AI Advisory",
+    title: "Quanta Services | Operational AI Consulting",
     description:
-      "Operational AI advisory for organizations that need cleaner workflows, faster decisions, and measurable business results.",
+      "Operational AI consulting for organizations that need cleaner workflows, faster decisions, and measurable business results.",
     images: [
       {
         url: "/images/visuals/gold-wave-hero.png",
@@ -60,9 +50,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Quanta Services | Operational AI Advisory",
+    title: "Quanta Services | Operational AI Consulting",
     description:
-      "Operational AI advisory for complex teams that need faster decisions and measurable business results.",
+      "Operational AI consulting for complex teams that need faster decisions and measurable business results.",
     images: ["/images/visuals/gold-wave-hero.png"],
   },
 };
@@ -81,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${headingFont.variable} ${bodyFont.variable} ${monoFont.variable}`}
+        className={`${bodyFont.variable} ${monoFont.variable}`}
       >
         <div className="site-shell">
           <SiteHeader />

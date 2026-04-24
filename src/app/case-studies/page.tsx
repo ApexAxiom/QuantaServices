@@ -18,10 +18,10 @@ export default function CaseStudiesPage() {
     <>
       <PageHero
         eyebrow="Case Studies"
-        title="Representative work showing what focused operational AI can deliver."
+        title="Representative work built around measurable workflow improvement."
         description="These examples show how disciplined scoping, clear controls, and measured rollout can improve throughput, reduce manual work, and give leadership better visibility."
         actions={[
-          { href: "/contact", label: "Discuss Your Priorities" },
+          { href: "/contact", label: "Book a Consultation" },
           { href: "/services", label: "Review Services", variant: "secondary" },
         ]}
         pills={[
@@ -34,7 +34,7 @@ export default function CaseStudiesPage() {
           <div className="page-hero-card">
             <p className="body-copy">
               Quanta measures success in cycle time, workload reduction,
-              decision quality, and visibility for leadership.
+              decision quality, and leadership visibility.
             </p>
             <div className="metrics-row" style={{ marginTop: "18px" }}>
               {companyStats.slice(0, 3).map((stat) => (
@@ -98,7 +98,7 @@ export default function CaseStudiesPage() {
           <SectionHeading
             eyebrow="Additional Wins"
             title="More examples of measurable improvement."
-            description="These programs were built around one contained workflow at a time and then expanded once the business case was proven."
+            description="Each program started with one contained workflow and expanded only after the business case was proven."
           />
 
           <div className="case-study-grid">
@@ -140,9 +140,9 @@ export default function CaseStudiesPage() {
         <div className="container">
           <CtaBanner
             eyebrow="Apply This"
-            title="Apply the same operating discipline to your own workflow."
-            description="If your team has a queue that drags, a reporting cycle that takes too long, or a decision path buried in documents and emails, Quanta can help define the right AI system around it."
-            primary={{ href: "/contact", label: "Talk Through the Workflow" }}
+            title="Apply the same discipline to your own workflow."
+            description="If your team has a queue that drags, a reporting cycle that takes too long, or a decision path buried in documents and emails, Quanta can define the right AI system around it."
+            primary={{ href: "/contact", label: "Book a Consultation" }}
             secondary={{ href: "/services", label: "See Capabilities" }}
           />
         </div>

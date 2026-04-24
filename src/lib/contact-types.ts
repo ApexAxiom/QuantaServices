@@ -1,4 +1,5 @@
 export type ContactFormRequest = {
+  interest: string;
   name: string;
   company: string;
   email: string;
