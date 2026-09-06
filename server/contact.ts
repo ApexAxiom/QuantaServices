@@ -1,6 +1,5 @@
-import "server-only";
 import nodemailer from "nodemailer";
-import type { ContactFormRequest } from "@/lib/contact-types";
+import type { ContactFormRequest } from "../src/lib/contact-types";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const smtpTimeoutMs = 12000;
@@ -75,14 +74,14 @@ export function validateContactPayload(payload: unknown) {
   };
 }
 
-export async function sendContactEmail(data: ContactFormRequest) {
-  const host = process.env.SMTP_HOST;
-  const port = Number(process.env.SMTP_PORT || "587");
-  const secure = process.env.SMTP_SECURE === "true";
-  const user = process.env.SMTP_USER;
-  const pass = process.env.SMTP_PASS;
-  const to = process.env.CONTACT_TO_EMAIL?.trim();
-  const from = process.env.SMTP_FROM || user;
+export async function sendContactEmail(data: ContactFormRequest, env: Record<string, string | undefined>) {
+  const host = env.SMTP_HOST;
+  const port = Number(env.SMTP_PORT || "587");
+  const secure = env.SMTP_SECURE === "true";
+  const user = env.SMTP_USER;
+  const pass = env.SMTP_PASS;
+  const to = env.CONTACT_TO_EMAIL?.trim();
+  const from = env.SMTP_FROM || user;
 
   if (!host || !user || !pass || !to || !from) {
     throw new Error("Contact email delivery is not configured.");

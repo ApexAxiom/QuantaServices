@@ -1,16 +1,15 @@
-import { NextResponse } from "next/server";
-import { sendContactEmail, validateContactPayload } from "@/lib/contact";
-import type { ContactResponse } from "@/lib/contact-types";
+import { sendContactEmail, validateContactPayload } from "../../server/contact";
 
-export const runtime = "nodejs";
-
-export async function POST(request: Request) {
+export async function onRequest({ request, env }: { request: Request; env: Record<string, string | undefined> }) {
+  if (request.method !== "POST") {
+    return new Response(null, { status: 405, headers: { Allow: "POST" } });
+  }
   let payload: unknown;
 
   try {
     payload = await request.json();
   } catch {
-    return NextResponse.json<ContactResponse>(
+    return Response.json(
       {
         success: false,
         message: "The request body could not be read.",
@@ -22,14 +21,14 @@ export async function POST(request: Request) {
   const { data, fieldErrors } = validateContactPayload(payload);
 
   if (data?.website) {
-    return NextResponse.json<ContactResponse>({
+    return Response.json({
       success: true,
       message: "Thanks. We will review your note and follow up shortly.",
     });
   }
 
   if (!data || fieldErrors) {
-    return NextResponse.json<ContactResponse>(
+    return Response.json(
       {
         success: false,
         message: "Please fix the highlighted fields and try again.",
@@ -40,9 +39,9 @@ export async function POST(request: Request) {
   }
 
   try {
-    await sendContactEmail(data);
+    await sendContactEmail(data, env);
 
-    return NextResponse.json<ContactResponse>({
+    return Response.json({
       success: true,
       message:
         "Thanks. Your note is in, and the Quanta team will follow up shortly.",
@@ -50,7 +49,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Contact submission failed", error);
 
-    return NextResponse.json<ContactResponse>(
+    return Response.json(
       {
         success: false,
         message:
