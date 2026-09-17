@@ -16,5 +16,5 @@ export const viewport: Viewport = { width: "device-width", initialScale: 1, them
 export default function RootLayout({ children }: Readonly<{
     children: React.ReactNode;
 }>) {
-    return <html lang="en"><body className={`${bodyFont.variable} ${monoFont.variable}`}><SiteHeader /><main id="main">{children}</main><SiteFooter /></body></html>;
+    return <html lang="en" data-scroll-behavior="smooth"><body className={`${bodyFont.variable} ${monoFont.variable}`}><SiteHeader /><main id="main">{children}</main><SiteFooter /></body></html>;
 }
