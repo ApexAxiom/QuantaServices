@@ -12,6 +12,6 @@ export function SiteHeader() {
         <Link href="/services">Technology</Link>
         <Link href="/frontiers">Frontiers</Link>
       </nav>
-      <Link className="header-connect" href="/contact">Connect <span aria-hidden="true">↗</span></Link>
+      <Link className="header-connect" href="/contact#conversation">Connect <span aria-hidden="true">↗</span></Link>
     </header>);
 }

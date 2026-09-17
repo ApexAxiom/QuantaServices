@@ -37,7 +37,7 @@ export default function AboutPage() {
       </section>
       <article className="service-entry">
         <h2>The next idea<br />may begin with you.</h2>
-        <div><p>We welcome conversations with researchers, engineers, and organizations asking difficult computational questions. Bring a problem, a perspective, or an unexpected connection.</p><Link href="/contact" className="text-link">Connect with Quanta ↗</Link></div>
+        <div><p>We welcome conversations with researchers, engineers, and organizations asking difficult computational questions. Bring a problem, a perspective, or an unexpected connection.</p><Link href="/contact#conversation" className="text-link">Connect with Quanta ↗</Link></div>
       </article>
     </section>
   </>;

@@ -10,7 +10,7 @@ export default function ContactPage() {
       <p>Great research begins with a conversation. Connect with Quanta about scientific questions, research collaborations, and new opportunities.</p>
     </section>
     <section className="content-section contact-grid">
-      <div><h2>Start the conversation.</h2><p className="form-copy">Choose a topic and share your message. Let us know what you are exploring and how we can reach you.</p><ContactForm /></div>
+      <div><h2 id="conversation" tabIndex={-1}>Start the conversation.</h2><p className="form-copy">Choose a topic and share your message. Let us know what you are exploring and how we can reach you.</p><ContactForm /></div>
       <aside className="contact-aside">
         <p className="eyebrow">Connect with our team</p>
         <h3>Research collaborations.</h3><p>Share a question, a complementary approach, or an opportunity to work across disciplines.</p>

@@ -77,7 +77,7 @@ export default function FrontiersPage() {
           <article><span className="eyebrow">03 / Challenge</span><h3>Push the comparison.</h3><p>Use exact methods where possible, capable classical approximations where necessary, and controlled experiments to understand where each approach succeeds.</p></article>
           <article><span className="eyebrow">04 / Translate</span><h3>Return to the science.</h3><p>Turn the computational result into a sharper hypothesis, a better model, or a new experiment. The measure of progress is what the answer makes possible.</p></article>
         </div>
-        <Link href="/contact" className="button button-primary">Bring us a difficult question ↗</Link>
+        <Link href="/contact#conversation" className="button button-primary">Bring us a difficult question ↗</Link>
       </section>
     </div>
   </>;

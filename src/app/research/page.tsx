@@ -83,7 +83,7 @@ export default function ResearchPage() {
           <li><strong>Resource.</strong> Estimate logical and physical costs for the target instance, including state preparation, error correction, decoding, and classical processing.</li>
           <li><strong>Decide.</strong> Expand only when a reproducible quality, runtime, or scientific-access benefit justifies the complete cost. Retain the classical approach when it remains superior.</li>
         </ol>
-        <div className="button-row"><Link href="/frontiers" className="button button-primary">Explore scientific applications ↗</Link><Link href="/contact" className="button button-secondary">Discuss a research direction ↗</Link></div>
+        <div className="button-row"><Link href="/frontiers" className="button button-primary">Explore scientific applications ↗</Link><Link href="/contact#conversation" className="button button-secondary">Discuss a research direction ↗</Link></div>
       </section>
       <section id="references" className="research-chapter references">
         <p className="eyebrow">Primary sources & further study</p>
