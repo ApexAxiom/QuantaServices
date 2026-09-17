@@ -1,40 +1,32 @@
-# Quanta Services
+# Quanta AI
 
-Chicago-based AI consulting site for Quanta Services, built with Next.js App Router.
+A cinematic, responsive Quanta AI website built with Next.js App Router.
 
-## Local Development
+## Development
 
-Run the development server:
+Run `npm run dev` and open http://localhost:3000.
+Run `npm run build` and `npm run lint` for production validation.
 
-```bash
-npm run dev
-```
+## Design
 
-Open `http://localhost:3000`.
+The quantum laboratory artwork is a visual metaphor for applied AI.
+The homepage uses real HTML text and links over a locally hosted WebP image.
+Gentle camera drift, core illumination, particles, and scientific diagrams use CSS animation.
+The hero includes a pause control. All motion respects prefers-reduced-motion.
 
-## Contact Form Configuration
+## Routes
 
-The contact form submits to a server-side Next.js route and never renders the destination inbox in the UI.
+- / — vision, lab, and areas of focus
+- /services — technology and capabilities
+- /about — philosophy
+- /contact — consultation form
+- /case-studies — redirects to /#lab; unsupported legacy results are no longer displayed
 
-Create or update local environment variables with:
+## Contact configuration
 
-```bash
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
-CONTACT_TO_EMAIL=your-private-inbox@example.com
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_SECURE=false
-SMTP_USER=your-smtp-user
-SMTP_PASS=your-smtp-password
-SMTP_FROM="Quanta Services <no-reply@example.com>"
-```
+The existing server-side contact endpoint uses SMTP. Configure NEXT_PUBLIC_SITE_URL,
+CONTACT_TO_EMAIL, SMTP_HOST, SMTP_PORT, SMTP_SECURE, SMTP_USER, SMTP_PASS, and
+SMTP_FROM through environment variables. Never commit credentials.
 
-If SMTP credentials are missing, the form UI still renders but submissions will fail with a safe generic error.
-
-## Key Routes
-
-- `/`
-- `/services`
-- `/case-studies`
-- `/about`
-- `/contact`
+The form reports failed delivery honestly when SMTP is unavailable. Local visual
+validation exercises invalid input without sending an email.

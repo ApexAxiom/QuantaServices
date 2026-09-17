@@ -234,7 +234,7 @@ export function ContactForm() {
       </div>
 
       {status ? (
-        <div className={`form-status ${status.type}`}>{status.message}</div>
+        <div role="status" aria-live="polite" className={`form-status ${status.type}`}>{status.message}</div>
       ) : null}
     </form>
   );
