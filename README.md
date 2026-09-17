@@ -30,7 +30,9 @@ Cloudflare Pages hosts the static export; functions/api/contact.ts provides the 
 CONTACT_TO_EMAIL, SMTP_HOST, SMTP_PORT, SMTP_SECURE, SMTP_USER, SMTP_PASS, and
 SMTP_FROM through environment variables. Never commit credentials.
 
-Store SMTP_USER and SMTP_PASS as Cloudflare production secrets; the deployment
+Store CONTACT_TO_EMAIL, SMTP_USER and SMTP_PASS as Cloudflare production secrets;
+Wrangler replaces plain-text variables with the values in wrangler.jsonc on
+deployment, so the private recipient must also be a secret. The deployment
 workflow checks that required email settings exist before publishing. SMTP_FROM
 is optional and defaults to SMTP_USER. Success is returned only after the mail
 server accepts the recipient, and appears as a green confirmation in the form.
