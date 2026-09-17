@@ -15,6 +15,15 @@ test('missing SMTP settings fail explicitly without attempting delivery', async 
   await assert.rejects(sendContactEmail(data, {}), /delivery is not configured/);
 });
 
+test('messages have no minimum length but must not be blank', () => {
+  for (const message of ['Buy', 'A']) {
+    assert.equal(validateContactPayload({ ...data, message }).fieldErrors, undefined);
+  }
+  for (const message of ['', '   ', '\n']) {
+    assert.equal(validateContactPayload({ ...data, message }).fieldErrors.message, 'Please include your message.');
+  }
+});
+
 test('SMTP relay retains recipient, reply address and delivery acknowledgement', async () => {
   const original = nodemailer.createTransport;
   let options;

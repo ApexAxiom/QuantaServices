@@ -61,8 +61,6 @@ export function validateContactPayload(payload: unknown) {
 
   if (!data.message) {
     fieldErrors.message = "Please include your message.";
-  } else if (data.message.length < 20) {
-    fieldErrors.message = "Please share a bit more detail so we can route your request.";
   }
 
   return {
