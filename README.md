@@ -18,7 +18,8 @@ The hero includes a pause control. All motion respects prefers-reduced-motion.
 
 - / — quantum research mission, scientific themes, and research culture
 - /services — quantum algorithms, logical architectures, and simulation research
-- /about — research identity and five fictional editorial personas
+- /about — research identity and five in-universe team biographies
+- /frontiers — scientific applications with linked primary research
 - /research — sourced technical perspective and interactive interference model
 - /contact — general, research, collaboration, and domain-purchase inquiries
 - /case-studies — redirects to /#lab; unsupported legacy results are no longer displayed

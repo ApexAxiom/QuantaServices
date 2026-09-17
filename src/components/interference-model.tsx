@@ -24,7 +24,7 @@ export function InterferenceModel() {
           </div>
         ))}
         <p className="equation">P(0) = cos²(φ/2)<br />P(1) = sin²(φ/2)</p>
-        <p className="model-note">Exact browser-side calculation for an ideal circuit. No quantum processor is connected; noise and finite-shot sampling are excluded.</p>
+        <p className="model-note">Ideal-circuit model · Exact Born-rule probabilities. Noise and finite-shot fluctuations are excluded.</p>
       </div>
     </section>
   );

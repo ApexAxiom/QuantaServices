@@ -226,7 +226,7 @@ export function ContactForm() {
 
       <div className="form-footer">
         <p className="form-note">
-          Your message is sent privately to the website owner for
+          Your message goes directly to Quanta for
           review.
         </p>
         <button type="submit" className="button button-primary" disabled={isSubmitting}>

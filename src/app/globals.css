@@ -1247,3 +1247,7 @@ button:disabled {
   .people-list h3 { font-size: 29px; }
   .primary-nav { gap: 24px; }
 }
+
+@media(max-width:640px) {
+  .footer>div { grid-column: 1 / -1; flex-wrap: wrap; }
+}

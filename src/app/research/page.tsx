@@ -25,10 +25,10 @@ function Cite({ n }: { n: number }) {
 export default function ResearchPage() {
   return <>
     <section className="inner-hero research-hero">
-      <p className="eyebrow">Quanta / Scientific perspectives / 01</p>
+      <p className="eyebrow">Quanta / Research notes / 01</p>
       <h1>Computation at<br />the quantum frontier.</h1>
       <p>From coherent amplitudes to fault-tolerant algorithms: the physical principles, computational opportunities, and engineering constraints behind a different model of computation.</p>
-      <p className="research-scope">A technical perspective connecting quantum information, algorithmic design, and scientific opportunity. References link directly to the researchers and institutions behind the cited work.</p>
+      <p className="research-scope">Our research connects the mathematics of quantum information with the engineering of useful computation. These are the foundations of that work.</p>
     </section>
     <nav className="research-nav" aria-label="Research contents">
       <a href="#formalism">01 / Formalism</a><a href="#algorithms">02 / Algorithms</a><a href="#fault-tolerance">03 / Fault tolerance</a><a href="#expansion">04 / Expansion</a><a href="#references">References ↗</a>
@@ -67,15 +67,15 @@ export default function ResearchPage() {
       </section>
       <section id="expansion" className="research-chapter">
         <p className="eyebrow">04 / The research horizon</p>
-        <h2>Build the evidence before scaling the ambition.</h2>
-        <p>Our research agenda begins with reproducible computational studies around well-defined scientific questions. These directions describe the problems to investigate, the comparisons to make, and the evidence needed to justify expansion.</p>
+        <h2>Follow the questions further.</h2>
+        <p>Our research agenda begins with reproducible computational studies around well-defined scientific questions. Across materials, optimization, and simulation, we look for problems where the physics of the computation belongs to the problem itself.</p>
         <div className="expansion-grid">
           <article><span className="eyebrow">A / Materials & energy</span><h3>Electronic structure.</h3><p>Investigate small active-space Hamiltonians relevant to catalytic reactions or energy materials. Compare quantum estimators against converged classical calculations before extrapolating. Catalyst-discovery research explicitly considers classical hardness, economic utility, and fault-tolerant resource requirements together. <Cite n={8} /></p></article>
           <article><span className="eyebrow">B / Operations research</span><h3>Constrained optimization.</h3><p>Translate a bounded scheduling or allocation problem into a documented cost Hamiltonian. Evaluate whether constraint encodings, penalty scales, and circuit depth preserve useful solutions. Compare solution quality and total elapsed time against strong mixed-integer and heuristic baselines; quantum advantage is an experimental hypothesis.</p></article>
           <article><span className="eyebrow">C / Uncertainty</span><h3>Risk and simulation.</h3><p>Identify an expectation-estimation bottleneck, define a reversible sampling model, and account for its preparation cost. Amplitude estimation becomes a candidate only when the full implementation preserves the theoretical sampling benefit.</p></article>
           <article><span className="eyebrow">D / Computational integration</span><h3>Scientific orchestration.</h3><p>Study how classical and quantum resources can share a scientific workload. Define the quantum subroutine precisely, measure the cost of preparation and post-processing, and identify where orchestration changes the end-to-end resource requirements.</p></article>
         </div>
-        <h3>An experimental program with explicit gates.</h3>
+        <h3>From first principles to the next experiment.</h3>
         <ol className="research-steps">
           <li><strong>Formalize.</strong> Define the objective, input distribution, observable, accuracy tolerance, and strongest feasible classical comparator.</li>
           <li><strong>Reproduce.</strong> Establish small-system reference results in an exact simulator. Track seeds, circuits, software versions, and uncertainty estimates.</li>
@@ -83,11 +83,11 @@ export default function ResearchPage() {
           <li><strong>Resource.</strong> Estimate logical and physical costs for the target instance, including state preparation, error correction, decoding, and classical processing.</li>
           <li><strong>Decide.</strong> Expand only when a reproducible quality, runtime, or scientific-access benefit justifies the complete cost. Retain the classical approach when it remains superior.</li>
         </ol>
-        <Link href="/contact" className="button button-primary">Discuss a research direction ↗</Link>
+        <div className="button-row"><Link href="/frontiers" className="button button-primary">Explore scientific applications ↗</Link><Link href="/contact" className="button button-secondary">Discuss a research direction ↗</Link></div>
       </section>
       <section id="references" className="research-chapter references">
         <p className="eyebrow">Primary sources & further study</p>
-        <h2>The literature behind the perspective.</h2>
+        <h2>Foundations we build upon.</h2>
         <ol>{references.map(([author,title,url],i) => <li key={url}><a href={url}><span>{String(i+1).padStart(2,"0")} / {author}</span><strong>{title} ↗</strong></a></li>)}</ol>
       </section>
     </div>

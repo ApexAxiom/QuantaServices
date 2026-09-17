@@ -10,6 +10,7 @@ export function SiteHeader() {
         <Link href="/about">Who we are</Link>
         <Link href="/research">Research</Link>
         <Link href="/services">Technology</Link>
+        <Link href="/frontiers">Frontiers</Link>
       </nav>
       <Link className="header-connect" href="/contact">Connect <span aria-hidden="true">↗</span></Link>
     </header>);
