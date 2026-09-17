@@ -30,15 +30,23 @@ test('SMTP relay retains recipient, reply address and delivery acknowledgement',
   let message;
   nodemailer.createTransport = config => {
     options = config;
-    return { sendMail: async payload => { message = payload; } };
+    return { sendMail: async payload => { message = payload; return { accepted: ['recipient@example.com'], rejected: [] }; } };
   };
   try {
     await sendContactEmail(data, { SMTP_HOST: 'smtp.example.com', SMTP_USER: 'test-user', SMTP_PASS: 'local-test-value', CONTACT_TO_EMAIL: 'recipient@example.com' });
     assert.equal(options.connectionTimeout, 12000);
     assert.equal(options.port, 587);
     assert.equal(message.to, 'recipient@example.com');
-    assert.equal(message.replyTo, 'Local test <test@example.com>');
+    assert.deepEqual(message.replyTo, { name: 'Local test', address: 'test@example.com' });
     assert.ok(message.text.includes(data.message));
+  } finally { nodemailer.createTransport = original; }
+});
+
+test('a mail server rejection must never produce a successful submission', async () => {
+  const original = nodemailer.createTransport;
+  nodemailer.createTransport = () => ({ sendMail: async () => ({ accepted: [], rejected: ['recipient@example.com'] }) });
+  try {
+    await assert.rejects(sendContactEmail(data, { SMTP_HOST: 'smtp.example.com', SMTP_USER: 'test-user', SMTP_PASS: 'local-test-value', CONTACT_TO_EMAIL: 'recipient@example.com' }), /did not accept/);
   } finally { nodemailer.createTransport = original; }
 });
 

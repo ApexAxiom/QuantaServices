@@ -34,4 +34,14 @@ jobs:
         run: |
           test -n "$CLOUDFLARE_API_TOKEN"
           test -n "$CLOUDFLARE_ACCOUNT_ID"
+          node --input-type=module <<'NODE'
+          const url = `https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/pages/projects/quantaservices`;
+          const response = await fetch(url, { headers: { Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}` } });
+          const payload = await response.json();
+          if (!response.ok || !payload.success) throw new Error('Could not verify contact email configuration.');
+          const vars = payload.result.deployment_configs.production.env_vars;
+          const missing = ['SMTP_HOST', 'SMTP_PORT', 'SMTP_SECURE', 'SMTP_USER', 'SMTP_PASS', 'CONTACT_TO_EMAIL'].filter(key => !vars?.[key]?.value);
+          if (missing.length) throw new Error(`Missing production contact settings: ${missing.join(', ')}`);
+          console.log('Production contact settings are present.');
+          NODE
           npx --yes wrangler@4.129.0 pages deploy out --project-name quantaservices --branch main --commit-hash "$GITHUB_SHA"

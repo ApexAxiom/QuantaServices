@@ -812,7 +812,9 @@ section[id],article[id] {
 }
 
 .form-status.success {
-  color: #c4e6d0;
+  color: #bbf7d0;
+  background: #123322;
+  border-color: #4ade80;
 }
 
 button:disabled {

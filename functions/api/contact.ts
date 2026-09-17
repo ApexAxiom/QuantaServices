@@ -44,7 +44,7 @@ export async function onRequest({ request, env }: { request: Request; env: Recor
     return Response.json({
       success: true,
       message:
-        "Thanks. Your note is in, and the Quanta team will follow up shortly.",
+        "Your message has been sent. Thank you for getting in touch.",
     });
   } catch (error) {
     console.error("Contact submission failed", error);

@@ -127,12 +127,16 @@ export async function sendContactEmail(data: ContactFormRequest, env: Record<str
     .filter(Boolean)
     .join("\n");
 
-  await transporter.sendMail({
+  const result = await transporter.sendMail({
     to,
     from,
-    replyTo: `${data.name} <${data.email}>`,
+    replyTo: { name: data.name, address: data.email },
     subject: `[QuantaServices.ai] ${data.interest} from ${data.company || data.name}`,
     text: textMessage,
     html: htmlMessage,
   });
+
+  if (!result.accepted?.length || result.rejected?.length) {
+    throw new Error("The mail server did not accept the inquiry recipient.");
+  }
 }
