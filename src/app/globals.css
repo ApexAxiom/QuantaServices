@@ -165,13 +165,13 @@ section[id],article[id] {
 }
 
 .scene-art img {
-  object-fit: cover;
-  object-position: 67% center;
+  object-fit: contain;
+  object-position: right bottom;
   animation: scene-breathe 22s ease-in-out infinite alternate;
 }
 
 .scene-shade {
-  background: linear-gradient(90deg,rgba(3,7,10,.58),rgba(3,7,10,.18) 37%,transparent 65%),linear-gradient(0deg,#06090c 0%,transparent 20%);
+  background: linear-gradient(90deg,rgba(3,7,10,.4),rgba(3,7,10,.08) 35%,transparent 60%),linear-gradient(0deg,#06090c 0%,transparent 8%);
 }
 
 .core-light {
@@ -646,23 +646,24 @@ section[id],article[id] {
 }
 
 .inner-hero {
-  padding: 175px 6% 75px;
+  padding: 175px 6% 90px;
   position: relative;
   border-bottom: 1px solid var(--line);
-  background: linear-gradient(90deg,#06090c 20%,#06090cbb),url('/images/visuals/quantum-core.webp') 70% 45%/cover;
+  background: linear-gradient(90deg,#06090cf2 0%,#06090cd9 28%,#06090c66 46%,transparent 68%),url('/images/visuals/quantum-core.webp') right bottom / auto 100% no-repeat;
+  min-height: clamp(720px, 56.3vw, 980px);
 }
 
 .inner-hero h1 {
-  font-size: clamp(48px,6vw,82px);
+  font-size: clamp(48px, 5vw, 76px);
   line-height: 1.05;
-  max-width: 900px;
+  max-width: 50%;
   letter-spacing: -.04em;
   margin-bottom: 30px;
 }
 
 .inner-hero>p:last-child {
   color: #b2c0cb;
-  max-width: 670px;
+  max-width: 43%;
   font-size: 15px;
 }
 
@@ -961,14 +962,14 @@ button:disabled {
     max-height: none;
   }
   .scene-art {
-    inset: 0 -40%;
+    inset: 330px -25% 50px;
     transform: none;
   }
   .scene-art img {
-    object-position: 67% center;
+    object-position: center bottom;
   }
   .scene-shade {
-    background: linear-gradient(180deg,#06090c70,#06090c80 37%,transparent 62%,#06090c 100%),linear-gradient(90deg,#06090c66,transparent);
+    background: linear-gradient(180deg,#06090c 0%,#06090c 35%,transparent 57%,transparent 90%,#06090c 100%);
   }
   .hero-copy {
     padding: 160px 6% 0;
@@ -1119,10 +1120,13 @@ button:disabled {
     font-size: 9px;
   }
   .inner-hero {
-    padding: 160px 6% 45px;
+    padding: 160px 6% 290px;
+    min-height: 0;
+    background: linear-gradient(180deg,#06090c 0%,#06090c 52%,transparent 78%),url('/images/visuals/quantum-core.webp') center bottom / 100% auto no-repeat;
   }
   .inner-hero h1 {
-    font-size: 48px;
+    font-size: 46px;
+    max-width: 100%;
   }
   .content-section {
     padding: 40px 6%;
@@ -1223,4 +1227,23 @@ button:disabled {
   .probability-panel { padding: 22px; }
   .equation { padding: 18px; }
   .primary-nav { gap: 20px; }
+}
+
+.perspectives-section { padding: 70px 0; border-bottom: 1px solid var(--line); }
+.perspectives-section h2 { font-size: clamp(38px,4vw,58px); line-height: 1.1; }
+.perspectives-note { font-size: 12px; color: #93a4b3; max-width: 650px; }
+.people-list { margin-top: 35px; }
+.people-list article { display: grid; grid-template-columns: 40px 1fr 1.4fr; gap: 25px; align-items: center; padding: 30px 0; border-top: 1px solid var(--line); }
+.people-list h3 { font-size: 32px; margin: 0; }
+.people-list .eyebrow { margin: 0; }
+.people-list strong { color: #c7dbe9; font-size: 12px; font-weight: 400; }
+.people-list p { color: #99acbb; font-size: 13px; margin: 7px 0 0; }
+.expansion-grid h3 { font-size: 30px; }
+.expansion-grid p { color: #aabac7; }
+@media(max-width:640px) {
+  .inner-hero>p:last-child { max-width: 100%; }
+  .people-list article { grid-template-columns: 25px 1fr; gap: 15px; }
+  .people-list article>div { grid-column: 2; }
+  .people-list h3 { font-size: 29px; }
+  .primary-nav { gap: 24px; }
 }

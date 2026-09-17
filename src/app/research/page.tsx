@@ -28,7 +28,7 @@ export default function ResearchPage() {
       <p className="eyebrow">Quanta / Scientific perspectives / 01</p>
       <h1>Computation at<br />the quantum frontier.</h1>
       <p>From coherent amplitudes to fault-tolerant algorithms: the physical principles, computational opportunities, and engineering constraints behind a different model of computation.</p>
-      <p className="research-scope">A technical perspective and proposed expansion agenda. The cited results belong to their respective researchers; this page does not describe a Quanta-operated quantum processor.</p>
+      <p className="research-scope">A technical perspective connecting quantum information, algorithmic design, and scientific opportunity. References link directly to the researchers and institutions behind the cited work.</p>
     </section>
     <nav className="research-nav" aria-label="Research contents">
       <a href="#formalism">01 / Formalism</a><a href="#algorithms">02 / Algorithms</a><a href="#fault-tolerance">03 / Fault tolerance</a><a href="#expansion">04 / Expansion</a><a href="#references">References ↗</a>
@@ -66,14 +66,14 @@ export default function ResearchPage() {
         <p>An application-level resource estimate must specify logical qubits, non-Clifford gate count and depth, code assumptions, physical error rates, and the tolerated probability of computation failure. Architecture-dependent scheduling and magic-state throughput convert these requirements into physical footprint and runtime. Resource estimates for battery-electrolyte chemistry illustrate why algorithm design and hardware architecture must be evaluated together. <Cite n={9} /></p>
       </section>
       <section id="expansion" className="research-chapter">
-        <p className="eyebrow">04 / A proposed expansion agenda</p>
+        <p className="eyebrow">04 / The research horizon</p>
         <h2>Build the evidence before scaling the ambition.</h2>
-        <p>For Quanta, expansion into quantum computing could begin with reproducible computational research around existing operational questions. The following directions are proposals, rather than announced products or completed experiments.</p>
+        <p>Our research agenda begins with reproducible computational studies around well-defined scientific questions. These directions describe the problems to investigate, the comparisons to make, and the evidence needed to justify expansion.</p>
         <div className="expansion-grid">
           <article><span className="eyebrow">A / Materials & energy</span><h3>Electronic structure.</h3><p>Investigate small active-space Hamiltonians relevant to catalytic reactions or energy materials. Compare quantum estimators against converged classical calculations before extrapolating. Catalyst-discovery research explicitly considers classical hardness, economic utility, and fault-tolerant resource requirements together. <Cite n={8} /></p></article>
           <article><span className="eyebrow">B / Operations research</span><h3>Constrained optimization.</h3><p>Translate a bounded scheduling or allocation problem into a documented cost Hamiltonian. Evaluate whether constraint encodings, penalty scales, and circuit depth preserve useful solutions. Compare solution quality and total elapsed time against strong mixed-integer and heuristic baselines; quantum advantage is an experimental hypothesis.</p></article>
           <article><span className="eyebrow">C / Uncertainty</span><h3>Risk and simulation.</h3><p>Identify an expectation-estimation bottleneck, define a reversible sampling model, and account for its preparation cost. Amplitude estimation becomes a candidate only when the full implementation preserves the theoretical sampling benefit.</p></article>
-          <article><span className="eyebrow">D / Hybrid intelligence</span><h3>Scientific orchestration.</h3><p>Use classical AI to help formulate experiments, organize literature, and inspect results. Delegate only a precisely defined subroutine to a quantum backend. A language model interface and a quantum computation remain distinct components with separate validation requirements.</p></article>
+          <article><span className="eyebrow">D / Computational integration</span><h3>Scientific orchestration.</h3><p>Study how classical and quantum resources can share a scientific workload. Define the quantum subroutine precisely, measure the cost of preparation and post-processing, and identify where orchestration changes the end-to-end resource requirements.</p></article>
         </div>
         <h3>An experimental program with explicit gates.</h3>
         <ol className="research-steps">

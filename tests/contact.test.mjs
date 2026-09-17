@@ -3,7 +3,7 @@ import { test } from 'node:test';
 import nodemailer from 'nodemailer';
 import { validateContactPayload, sendContactEmail } from '../server/contact.ts';
 
-const data = { interest: 'Book a consultation', name: 'Local test', company: 'Example', email: 'test@example.com', phone: '', message: 'A local-only contract test with sufficient detail.', website: '' };
+const data = { interest: 'General inquiry', name: 'Local test', company: 'Example', email: 'test@example.com', phone: '', message: 'A local-only contract test with sufficient detail.', website: '' };
 
 test('contact validation preserves required fields and real submission shape', () => {
   assert.ok(validateContactPayload({}).fieldErrors);
@@ -31,4 +31,12 @@ test('SMTP relay retains recipient, reply address and delivery acknowledgement',
     assert.equal(message.replyTo, 'Local test <test@example.com>');
     assert.ok(message.text.includes(data.message));
   } finally { nodemailer.createTransport = original; }
+});
+
+
+test('domain inquiries allow individual buyers without a company', () => {
+  const inquiry = { ...data, interest: 'Domain purchase inquiry', company: '' };
+  assert.equal(validateContactPayload(inquiry).fieldErrors, undefined);
+  assert.ok(validateContactPayload({ ...inquiry, email: 'invalid' }).fieldErrors.email);
+  assert.ok(validateContactPayload({ ...inquiry, interest: 'unrecognized' }).fieldErrors.interest);
 });

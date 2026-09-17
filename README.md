@@ -16,11 +16,11 @@ The hero includes a pause control. All motion respects prefers-reduced-motion.
 
 ## Routes
 
-- / — vision, lab, and areas of focus
-- /services — technology and capabilities
-- /about — philosophy
+- / — quantum research mission, scientific themes, and research culture
+- /services — quantum algorithms, logical architectures, and simulation research
+- /about — research identity and five fictional editorial personas
 - /research — sourced technical perspective and interactive interference model
-- /contact — consultation form
+- /contact — general, research, collaboration, and domain-purchase inquiries
 - /case-studies — redirects to /#lab; unsupported legacy results are no longer displayed
 
 ## Contact configuration

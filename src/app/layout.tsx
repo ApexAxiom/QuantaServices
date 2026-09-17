@@ -8,8 +8,8 @@ const monoFont = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400"], variable: 
 export const metadata: Metadata = {
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://quantaservices.ai"),
     title: { default: "Quanta AI | Intelligence, beyond possibility.", template: "%s | Quanta AI" },
-    description: "Ambitious thinking. Practical AI. Quanta connects information, workflows, and people to create a new dimension of intelligence.",
-    openGraph: { title: "Quanta AI | Intelligence, beyond possibility.", description: "Quantum-inspired. Human-driven. Discover a new dimension of intelligence.", images: [{ url: "/images/visuals/quantum-core.webp", width: 1672, height: 941, alt: "A luminous quantum core in a futuristic laboratory" }] },
+    description: "Quantum research at the frontier of algorithms, fault-tolerant architectures, and scientific computation.",
+    openGraph: { title: "Quanta AI | Intelligence, beyond possibility.", description: "Quantum research. Expanding possibility. Explore a new dimension of computation.", images: [{ url: "/images/visuals/quantum-core.webp", width: 1672, height: 941, alt: "A luminous quantum core in a futuristic laboratory" }] },
     twitter: { card: "summary_large_image", images: ["/images/visuals/quantum-core.webp"] },
 };
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#06090c" };

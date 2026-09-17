@@ -4,9 +4,10 @@ import type { ContactFormRequest } from "../src/lib/contact-types";
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const smtpTimeoutMs = 12000;
 const allowedInterests = new Set([
-  "Book a consultation",
-  "Discuss a workflow problem",
-  "Ask a project question",
+  "General inquiry",
+  "Domain purchase inquiry",
+  "Partnership or collaboration",
+  "Research inquiry",
 ]);
 
 function toTrimmedString(value: unknown) {
@@ -26,14 +27,14 @@ export function validateContactPayload(payload: unknown) {
   if (!payload || typeof payload !== "object") {
     return {
       fieldErrors: {
-        message: "Please include a short project brief.",
+        message: "Please include a message.",
       },
     };
   }
 
   const record = payload as Record<string, unknown>;
   const data: ContactFormRequest = {
-    interest: toTrimmedString(record.interest) || "Book a consultation",
+    interest: toTrimmedString(record.interest) || "General inquiry",
     name: toTrimmedString(record.name),
     company: toTrimmedString(record.company),
     email: toTrimmedString(record.email),
@@ -52,18 +53,14 @@ export function validateContactPayload(payload: unknown) {
     fieldErrors.name = "Please enter your name.";
   }
 
-  if (!data.company) {
-    fieldErrors.company = "Please enter your company name.";
-  }
-
   if (!data.email) {
-    fieldErrors.email = "Please enter a work email.";
+    fieldErrors.email = "Please enter an email address.";
   } else if (!emailPattern.test(data.email)) {
     fieldErrors.email = "Please enter a valid email address.";
   }
 
   if (!data.message) {
-    fieldErrors.message = "Please describe the workflow or opportunity.";
+    fieldErrors.message = "Please include your message.";
   } else if (data.message.length < 20) {
     fieldErrors.message = "Please share a bit more detail so we can route your request.";
   }
@@ -112,7 +109,7 @@ export async function sendContactEmail(data: ContactFormRequest, env: Record<str
           ? `<p><strong>Phone:</strong> ${escapeHtml(data.phone)}</p>`
           : ""
       }
-      <p><strong>Project brief:</strong></p>
+      <p><strong>Message:</strong></p>
       <p>${escapeHtml(data.message).replaceAll("\n", "<br />")}</p>
     </div>
   `;
@@ -126,7 +123,7 @@ export async function sendContactEmail(data: ContactFormRequest, env: Record<str
     `Email: ${data.email}`,
     data.phone ? `Phone: ${data.phone}` : undefined,
     "",
-    "Project brief:",
+    "Message:",
     data.message,
   ]
     .filter(Boolean)
@@ -136,7 +133,7 @@ export async function sendContactEmail(data: ContactFormRequest, env: Record<str
     to,
     from,
     replyTo: `${data.name} <${data.email}>`,
-    subject: `${data.interest} from ${data.company}`,
+    subject: `[QuantaServices.ai] ${data.interest} from ${data.company || data.name}`,
     text: textMessage,
     html: htmlMessage,
   });

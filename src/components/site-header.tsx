@@ -7,7 +7,7 @@ export function SiteHeader() {
         <span>QUANTA AI</span>
       </Link>
       <nav className="primary-nav" aria-label="Primary">
-        <Link href="/#vision">Vision</Link>
+        <Link href="/about">Who we are</Link>
         <Link href="/research">Research</Link>
         <Link href="/services">Technology</Link>
       </nav>

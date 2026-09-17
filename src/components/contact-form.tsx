@@ -9,7 +9,7 @@ type StatusState =
   | null;
 
 const initialForm: ContactFormRequest = {
-  interest: "Book a consultation",
+  interest: "General inquiry",
   name: "",
   company: "",
   email: "",
@@ -114,9 +114,10 @@ export function ContactForm() {
             value={form.interest}
             onChange={handleChange}
           >
-            <option>Book a consultation</option>
-            <option>Discuss a workflow problem</option>
-            <option>Ask a project question</option>
+            <option>General inquiry</option>
+            <option>Research inquiry</option>
+            <option>Domain purchase inquiry</option>
+            <option>Partnership or collaboration</option>
           </select>
           {fieldErrors.interest ? (
             <span className="field-error">{fieldErrors.interest}</span>
@@ -143,7 +144,7 @@ export function ContactForm() {
 
         <div className="form-field">
           <label className="form-label" htmlFor="company">
-            Company
+            Company (optional)
           </label>
           <input
             id="company"
@@ -161,7 +162,7 @@ export function ContactForm() {
 
         <div className="form-field">
           <label className="form-label" htmlFor="email">
-            Work Email
+            Email
           </label>
           <input
             id="email"
@@ -207,7 +208,7 @@ export function ContactForm() {
 
         <div className="form-field-full" id="brief">
           <label className="form-label" htmlFor="message">
-            What should we help you evaluate?
+            Your message
           </label>
           <textarea
             id="message"
@@ -215,7 +216,7 @@ export function ContactForm() {
             className="form-textarea"
             value={form.message}
             onChange={handleChange}
-            placeholder="Share the workflow, backlog, reporting issue, or decision bottleneck you want to improve."
+            placeholder="Tell us about your question, idea, or interest in the domain."
           />
           {fieldErrors.message ? (
             <span className="field-error">{fieldErrors.message}</span>
@@ -225,11 +226,11 @@ export function ContactForm() {
 
       <div className="form-footer">
         <p className="form-note">
-          A short brief is enough. Quanta reviews each inquiry before the first
-          consultation.
+          Your message is sent privately to the website owner for
+          review.
         </p>
         <button type="submit" className="button button-primary" disabled={isSubmitting}>
-          {isSubmitting ? "Sending..." : "Request Consultation"}
+          {isSubmitting ? "Sending..." : "Send inquiry"}
         </button>
       </div>
 
