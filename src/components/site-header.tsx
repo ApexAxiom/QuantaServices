@@ -8,7 +8,7 @@ export function SiteHeader() {
       </Link>
       <nav className="primary-nav" aria-label="Primary">
         <Link href="/#vision">Vision</Link>
-        <Link href="/#lab">The Lab</Link>
+        <Link href="/research">Research</Link>
         <Link href="/services">Technology</Link>
       </nav>
       <Link className="header-connect" href="/contact">Connect <span aria-hidden="true">↗</span></Link>

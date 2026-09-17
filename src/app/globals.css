@@ -1178,3 +1178,49 @@ button:disabled {
     display: none;
   }
 }
+
+/* Quantum research: readable technical typography and a bounded analytical model. */
+.research-hero .research-scope { font-size: 12px; max-width: 760px; color: #a0b2c2; }
+.research-nav { display: flex; gap: 28px; flex-wrap: wrap; padding: 24px 6%; border-bottom: 1px solid var(--line); }
+.research-nav a { font-family: var(--font-mono),monospace; font-size: 10px; padding: 8px 0; color: var(--ice); }
+.research-document { max-width: 1160px; padding: 0 6%; margin: auto; }
+.research-chapter { padding: 75px 0; border-bottom: 1px solid var(--line); }
+.research-chapter h2,.interference-model h2 { font-size: clamp(32px,4vw,50px); line-height: 1.12; letter-spacing: -.03em; max-width: 800px; }
+.research-chapter h3 { font-size: 28px; margin: 38px 0 18px; }
+.research-chapter p,.research-steps li,.interference-model p { font-size: 15px; line-height: 1.95; color: #b8c5d0; }
+.research-chapter>p { max-width: 850px; }
+.equation { padding: 26px; border-left: 2px solid #80b9de; background: #101c2666; font-family: Georgia,serif; font-size: clamp(17px,2vw,23px); line-height: 1.9; color: #d8ecfa; overflow-x: auto; margin: 28px 0; }
+.citation { font-family: var(--font-mono),monospace; color: var(--ice); font-size: 12px; white-space: nowrap; padding: 3px; text-decoration: underline; text-underline-offset: 4px; }
+.interference-model { padding: 40px 0; display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; border-bottom: 1px solid var(--line); }
+.interference-model label { display: flex; justify-content: space-between; font-size: 13px; }
+.interference-model input { width: 100%; accent-color: #a8d6fa; min-height: 44px; cursor: pointer; }
+.probability-panel { align-self: center; padding: 30px; background: #0c141c; border: 1px solid var(--line); }
+.probability-row { margin: 24px 0; }
+.probability-row>div:first-child { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 16px; }
+.probability-track { height: 5px; background: #263747; }
+.probability-track span { display: block; height: 100%; background: #a8d6fa; transition: width .15s; box-shadow: 0 0 15px #a8d6fa50; }
+.probability-panel .equation { padding: 15px; font-size: 19px; }
+.probability-panel .model-note { font-size: 11px; line-height: 1.8; margin: 0; }
+.expansion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 45px; margin: 40px 0; }
+.expansion-grid article { padding-top: 24px; border-top: 1px solid var(--line); }
+.expansion-grid h3 { margin-top: 16px; }
+.expansion-grid p { font-size: 14px; }
+.research-steps { padding-left: 22px; margin-bottom: 35px; }
+.research-steps li { padding: 8px 0 8px 10px; }
+.research-steps strong { color: white; }
+.references ol { padding: 0; list-style: none; }
+.references li { padding: 18px 0; border-top: 1px solid var(--line); }
+.references a { display: grid; gap: 8px; }
+.references a span { font-family: var(--font-mono),monospace; font-size: 10px; color: #9ab9d0; }
+.references a strong { font-weight: 400; font-size: 13px; line-height: 1.6; }
+.quantum-feature { background: radial-gradient(ellipse at 85% 50%,#16324c66,transparent 65%); }
+.quantum-feature .equation { font-size: clamp(20px,3vw,38px); margin: 35px 0; }
+@media(max-width:640px) {
+  .research-nav { gap: 12px 20px; }
+  .research-chapter { padding: 50px 0; }
+  .research-chapter p,.research-steps li,.interference-model p { font-size: 14px; }
+  .interference-model,.expansion-grid { grid-template-columns: 1fr; gap: 25px; }
+  .probability-panel { padding: 22px; }
+  .equation { padding: 18px; }
+  .primary-nav { gap: 20px; }
+}

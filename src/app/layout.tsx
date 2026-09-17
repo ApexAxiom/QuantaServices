@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/site-header";
 const bodyFont = Manrope({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-body", display: "swap" });
 const monoFont = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400"], variable: "--font-mono", display: "swap" });
 export const metadata: Metadata = {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://quantaservices.ai"),
     title: { default: "Quanta AI | Intelligence, beyond possibility.", template: "%s | Quanta AI" },
     description: "Ambitious thinking. Practical AI. Quanta connects information, workflows, and people to create a new dimension of intelligence.",
     openGraph: { title: "Quanta AI | Intelligence, beyond possibility.", description: "Quantum-inspired. Human-driven. Discover a new dimension of intelligence.", images: [{ url: "/images/visuals/quantum-core.webp", width: 1672, height: 941, alt: "A luminous quantum core in a futuristic laboratory" }] },

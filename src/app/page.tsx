@@ -47,6 +47,12 @@ export default function HomePage() {
         ].map(([n, title, copy, href, label]) => <Link href={href} className="research-row" key={n}><span className="row-number">{n}</span><div><span className="eyebrow">{label}</span><h3>{title}</h3></div><p>{copy}</p><span className="row-arrow">↗</span></Link>)}
       </div>
     </section>
+    <section className="section-wrap quantum-feature" id="quantum">
+      <div className="section-index"><span className="status-dot" />03 / QUANTUM RESEARCH</div>
+      <div className="lab-heading"><h2>A different substrate.<br />A deeper computation.</h2><p>Explore the mathematics and engineering that connect quantum information to computational possibility.</p></div>
+      <div className="equation">|ψ⟩ = α|0⟩ + β|1⟩ &nbsp; · &nbsp; |α|² + |β|² = 1</div>
+      <div className="vision-bottom"><p>Coherent amplitudes. Controlled interference. Logical qubits. Quantum computing changes how a problem can be represented and transformed—and demands a rigorous account of what can be measured.</p><div><p>Our technical perspective examines phase estimation, variational algorithms, fault tolerance, and proposed expansion paths in materials, optimization, and hybrid intelligence.</p><Link href="/research" className="text-link">Explore the quantum research perspective ↗</Link></div></div>
+    </section>
     <section className="closing-section"><p className="eyebrow">The next chapter starts with a question.</p><h2>What could<br />you make possible?</h2><Link href="/contact" className="button button-primary">Let’s find out <span>↗</span></Link><div className="closing-orbit" aria-hidden="true"/></section>
   </>;
 }
